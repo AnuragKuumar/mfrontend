@@ -59,7 +59,7 @@ const Home = () => {
             <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg rounded-2xl p-4 lg:p-8 border border-gray-700/50 hover:border-pink-500/50 transition-colors duration-300 shadow-xl order-1 lg:order-2">
               <div className="text-center mb-6 lg:mb-8">
                 <h1 className="text-xl lg:text-2xl font-bold text-white mb-4 leading-tight">
-                  Book Free  Device Repairs
+                  Book Free Device Repairs
                 </h1>
               </div>
 
