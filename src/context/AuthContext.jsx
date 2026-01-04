@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { API_BASE_URL } from '../config/api';
 import { 
   sanitizeInput, 
   validateEmail, 
@@ -81,7 +82,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     try {
-      const res = await axios.get('/api/auth/me');
+      const res = await axios.get(`${API_BASE_URL}/auth/me`);
       dispatch({
         type: 'USER_LOADED',
         payload: res.data.user,
@@ -126,7 +127,7 @@ export const AuthProvider = ({ children }) => {
         'X-CSRF-Token': csrfToken.get()
       };
 
-      const res = await axios.post('/api/auth/register', sanitizedData, { headers });
+      const res = await axios.post(`${API_BASE_URL}/auth/register`, sanitizedData, { headers });
       dispatch({
         type: 'REGISTER_SUCCESS',
         payload: res.data,
@@ -192,7 +193,7 @@ export const AuthProvider = ({ children }) => {
         'X-CSRF-Token': csrfToken.get()
       };
       
-      const res = await axios.post('/api/auth/login', sanitizedData, { headers });
+      const res = await axios.post(`${API_BASE_URL}/auth/login`, sanitizedData, { headers });
       dispatch({
         type: 'LOGIN_SUCCESS',
         payload: res.data,

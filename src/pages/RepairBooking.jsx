@@ -4,6 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import { FiUser, FiMail, FiPhone, FiSmartphone, FiTool, FiMessageSquare, FiCheck, FiArrowLeft } from 'react-icons/fi';
 import toast from 'react-hot-toast';
 import axios from 'axios';
+import { API_BASE_URL } from '../config/api';
 
 const RepairBooking = () => {
   const { isAuthenticated } = useAuth();
@@ -138,7 +139,7 @@ const RepairBooking = () => {
 
       // Try to submit to API, fallback to demo mode
       try {
-        const response = await axios.post('/api/repairs', bookingData);
+        const response = await axios.post(`${API_BASE_URL}/repairs`, bookingData);
         if (response.data.success) {
           toast.success('🎉 Repair booking submitted successfully!');
           toast.success('📞 We will contact you within 2 hours');

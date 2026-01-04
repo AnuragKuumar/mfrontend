@@ -16,6 +16,7 @@ import {
 import { FaWhatsapp } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 import axios from 'axios';
+import { API_BASE_URL } from '../config/api';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -69,8 +70,8 @@ const AdminDashboard = () => {
 
       // Fetch dashboard stats and bookings
       const [dashboardRes, bookingsRes] = await Promise.all([
-        axios.get('http://localhost:5000/api/admin/dashboard', config),
-        axios.get('http://localhost:5000/api/admin/bookings?limit=20', config)
+        axios.get(`${API_BASE_URL}/admin/dashboard`, config),
+        axios.get(`${API_BASE_URL}/admin/bookings?limit=20`, config)
       ]);
 
       if (dashboardRes.data.success) {
@@ -111,7 +112,7 @@ const AdminDashboard = () => {
       };
 
       const response = await axios.put(
-        `http://localhost:5000/api/admin/bookings/${bookingId}`,
+        `${API_BASE_URL}/admin/bookings/${bookingId}`,
         { status },
         config
       );
@@ -152,7 +153,7 @@ const AdminDashboard = () => {
         };
 
         const response = await axios.post(
-          'http://localhost:5000/api/admin/send-sms',
+          `${API_BASE_URL}/admin/send-sms`,
           { phone, customerName, message },
           config
         );
