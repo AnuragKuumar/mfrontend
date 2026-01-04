@@ -64,17 +64,17 @@ const Home = () => {
         <div className="absolute -bottom-40 left-1/2 w-72 h-72 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-bounce" style={{animationDuration: '10s', animationDelay: '4s'}}></div>
       </div>
       {/* Main Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 relative z-10">
+      <section className="min-h-screen flex items-center justify-center px-4 py-8 relative z-10">
         <div className="max-w-7xl mx-auto w-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             
             {/* Left Side - Your SVG File */}
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 to-purple-600 min-h-[400px] flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-500 glow-on-hover">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 to-purple-600 min-h-[300px] lg:min-h-[400px] flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-500 glow-on-hover order-2 lg:order-1">
               <img 
                 src="/images/file.svg" 
                 alt="Professional iPhone Repair Service" 
                 className="w-full h-full object-contain rounded-3xl"
-                style={{ minHeight: '400px' }}
+                style={{ minHeight: '300px' }}
                 onError={(e) => {
                   e.target.style.display = 'none';
                   e.target.nextSibling.style.display = 'flex';
@@ -82,30 +82,30 @@ const Home = () => {
               />
               {/* Fallback if SVG doesn't load */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl flex items-center justify-center" style={{ display: 'none' }}>
-                <div className="text-center text-white p-8">
-                  <div className="text-6xl mb-4">📱</div>
-                  <h3 className="text-2xl font-bold mb-2">Professional iPhone Repair</h3>
-                  <p className="text-lg opacity-90">Expert service with genuine parts</p>
+                <div className="text-center text-white p-4 lg:p-8">
+                  <div className="text-4xl lg:text-6xl mb-4">📱</div>
+                  <h3 className="text-xl lg:text-2xl font-bold mb-2">Professional iPhone Repair</h3>
+                  <p className="text-base lg:text-lg opacity-90">Expert service with genuine parts</p>
                 </div>
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl pointer-events-none"></div>
             </div>
 
             {/* Right Side - Booking Form */}
-            <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg rounded-2xl p-8 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-500 shadow-xl glow-on-hover">
-              <div className="text-center mb-8">
-                <h1 className="text-2xl font-bold text-white mb-4">
+            <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg rounded-2xl p-4 lg:p-8 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-500 shadow-xl glow-on-hover order-1 lg:order-2">
+              <div className="text-center mb-6 lg:mb-8">
+                <h1 className="text-xl lg:text-2xl font-bold text-white mb-4 leading-tight">
                   Book Free Pickup for Device Repairs
                 </h1>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-4 lg:space-y-6">
                 {/* Name Field */}
                 <div>
                   <input
                     type="text"
                     placeholder="Name"
-                    className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                    className="w-full px-4 py-3 lg:py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300 text-sm lg:text-base"
                   />
                 </div>
 
@@ -116,18 +116,18 @@ const Home = () => {
                     placeholder="Phone Number"
                     value={phoneNumber}
                     onChange={(e) => setPhoneNumber(e.target.value)}
-                    className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                    className="w-full px-4 py-3 lg:py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300 text-sm lg:text-base"
                   />
                 </div>
 
                 {/* Pincode Field */}
-                <div className="flex">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-0">
                   <input
                     type="text"
                     placeholder="Pincode"
-                    className="flex-1 px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                    className="flex-1 px-4 py-3 lg:py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-lg sm:rounded-l-lg sm:rounded-r-none text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300 text-sm lg:text-base"
                   />
-                  <button className="px-6 py-4 bg-gray-600/80 backdrop-blur-sm border border-l-0 border-gray-600 rounded-r-lg text-gray-300 hover:bg-gray-500/80 hover:text-white transition-all duration-300">
+                  <button className="px-4 lg:px-6 py-3 lg:py-4 bg-gray-600/80 backdrop-blur-sm border border-gray-600 rounded-lg sm:rounded-r-lg sm:rounded-l-none sm:border-l-0 text-gray-300 hover:bg-gray-500/80 hover:text-white transition-all duration-300 text-sm lg:text-base whitespace-nowrap">
                     Check
                   </button>
                 </div>
@@ -135,27 +135,27 @@ const Home = () => {
                 {/* Book Now Button */}
                 <button
                   onClick={handleContinue}
-                  className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-pink-500/25 transform hover:scale-105 btn-glow"
+                  className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold py-3 lg:py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-pink-500/25 transform hover:scale-105 btn-glow text-sm lg:text-base"
                 >
                   Book Now
                 </button>
 
                 {/* Stats */}
-                <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-600/50">
+                <div className="grid grid-cols-3 gap-2 lg:gap-4 pt-4 lg:pt-6 border-t border-gray-600/50">
                   <div className="text-center">
                     <div className="flex items-center justify-center mb-1">
-                      <FiStar className="text-yellow-400 w-4 h-4 mr-1 animate-pulse" />
-                      <span className="font-bold text-white">4.7/5</span>
+                      <FiStar className="text-yellow-400 w-3 h-3 lg:w-4 lg:h-4 mr-1 animate-pulse" />
+                      <span className="font-bold text-white text-xs lg:text-sm">4.7/5</span>
                     </div>
-                    <p className="text-xs text-gray-400">Based on 7000+ Reviews</p>
+                    <p className="text-xs text-gray-400 leading-tight">Based on 7000+ Reviews</p>
                   </div>
                   <div className="text-center">
-                    <div className="font-bold text-pink-400 mb-1 animate-pulse">1,25,000+</div>
-                    <p className="text-xs text-gray-400">Trusted by Customers</p>
+                    <div className="font-bold text-pink-400 mb-1 animate-pulse text-xs lg:text-sm">1,25,000+</div>
+                    <p className="text-xs text-gray-400 leading-tight">Trusted by Customers</p>
                   </div>
                   <div className="text-center">
-                    <div className="font-bold text-green-400 mb-1 animate-pulse">7000+</div>
-                    <p className="text-xs text-gray-400">Devices Pickup Completed</p>
+                    <div className="font-bold text-green-400 mb-1 animate-pulse text-xs lg:text-sm">7000+</div>
+                    <p className="text-xs text-gray-400 leading-tight">Devices Pickup Completed</p>
                   </div>
                 </div>
               </div>
@@ -165,54 +165,54 @@ const Home = () => {
       </section>
 
       {/* Secondary Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg relative z-10">
+      <section className="py-12 lg:py-20 px-4 bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             
             {/* Left Side - Content */}
-            <div className="space-y-8">
-              <div className="flex items-center justify-center mb-6">
+            <div className="space-y-6 lg:space-y-8">
+              <div className="flex items-center justify-center mb-4 lg:mb-6">
                 <img 
                   src="/images/mkitone-logo.svg" 
                   alt="Mobi repair Logo" 
-                  className="w-16 h-16 animate-pulse"
+                  className="w-12 h-12 lg:w-16 lg:h-16 animate-pulse"
                 />
               </div>
               
-              <h2 className="text-4xl font-bold text-white leading-tight">
+              <h2 className="text-2xl lg:text-4xl font-bold text-white leading-tight text-center lg:text-left">
                 Your Reliable Repair Partner
               </h2>
 
-              <div className="space-y-4 stagger-animation">
+              <div className="space-y-3 lg:space-y-4 stagger-animation">
                 <div className="flex items-center space-x-3 glow-on-hover p-3 rounded-lg bg-gray-700/30 backdrop-blur-sm">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center animate-pulse">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center animate-pulse flex-shrink-0">
                     <span className="text-white text-sm">1</span>
                   </div>
-                  <span className="text-gray-300">Free Checkup for your device</span>
+                  <span className="text-gray-300 text-sm lg:text-base">Free Checkup for your device</span>
                 </div>
                 <div className="flex items-center space-x-3 glow-on-hover p-3 rounded-lg bg-gray-700/30 backdrop-blur-sm">
-                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center animate-pulse">
+                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center animate-pulse flex-shrink-0">
                     <span className="text-white text-sm">2</span>
                   </div>
-                  <span className="text-gray-300">Free Pickup & Delivery</span>
+                  <span className="text-gray-300 text-sm lg:text-base">Free Pickup & Delivery</span>
                 </div>
                 <div className="flex items-center space-x-3 glow-on-hover p-3 rounded-lg bg-gray-700/30 backdrop-blur-sm">
-                  <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center animate-pulse">
+                  <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center animate-pulse flex-shrink-0">
                     <span className="text-white text-sm">3</span>
                   </div>
-                  <span className="text-gray-300">1,25,000+ Happy Customers</span>
+                  <span className="text-gray-300 text-sm lg:text-base">1,25,000+ Happy Customers</span>
                 </div>
                 <div className="flex items-center space-x-3 glow-on-hover p-3 rounded-lg bg-gray-700/30 backdrop-blur-sm">
-                  <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center animate-pulse">
+                  <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center animate-pulse flex-shrink-0">
                     <span className="text-white text-sm">4</span>
                   </div>
-                  <span className="text-gray-300">200+ Repairs Done per day</span>
+                  <span className="text-gray-300 text-sm lg:text-base">200+ Repairs Done per day</span>
                 </div>
                 <div className="flex items-center space-x-3 glow-on-hover p-3 rounded-lg bg-gray-700/30 backdrop-blur-sm">
-                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center animate-pulse">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center animate-pulse flex-shrink-0">
                     <span className="text-white text-sm">5</span>
                   </div>
-                  <span className="text-gray-300">Repairs done under CCTV</span>
+                  <span className="text-gray-300 text-sm lg:text-base">Repairs done under CCTV</span>
                 </div>
               </div>
             </div>
@@ -221,16 +221,16 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-lg relative z-10">
+      <section className="py-12 lg:py-20 px-4 bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-lg relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Our Repair Services</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
+          <div className="text-center mb-8 lg:mb-12">
+            <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">Our Repair Services</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto text-sm lg:text-base">
               Professional mobile repair services with genuine parts and expert technicians
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-animation">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 stagger-animation">
             {[
               { 
                 name: 'Display Replacement', 
@@ -269,21 +269,21 @@ const Home = () => {
                 desc: 'Camera not working or blurry images' 
               }
             ].map((service, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg rounded-xl p-6 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-500 glow-on-hover shadow-xl">
+              <div key={index} className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg rounded-xl p-4 lg:p-6 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-500 glow-on-hover shadow-xl">
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-white/10 rounded-xl backdrop-blur-sm">
+                  <div className="w-12 h-12 lg:w-16 lg:h-16 mx-auto mb-3 lg:mb-4 flex items-center justify-center bg-white/10 rounded-xl backdrop-blur-sm">
                     <img 
                       src={service.logo} 
                       alt={service.brand} 
-                      className="w-10 h-10 object-contain"
+                      className="w-8 h-8 lg:w-10 lg:h-10 object-contain"
                     />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{service.name}</h3>
-                  <p className="text-pink-400 text-sm font-medium mb-2">{service.brand}</p>
-                  <p className="text-gray-300 text-sm mb-4">{service.desc}</p>
+                  <h3 className="text-base lg:text-lg font-semibold text-white mb-2">{service.name}</h3>
+                  <p className="text-pink-400 text-xs lg:text-sm font-medium mb-2">{service.brand}</p>
+                  <p className="text-gray-300 text-xs lg:text-sm mb-3 lg:mb-4">{service.desc}</p>
                   <Link
                     to="/repair-booking"
-                    className="inline-flex items-center space-x-2 text-pink-400 hover:text-pink-300 transition-colors morph-button"
+                    className="inline-flex items-center space-x-2 text-pink-400 hover:text-pink-300 transition-colors morph-button text-sm"
                   >
                     <span>Book Now</span>
                     <FiArrowRight />
@@ -296,19 +296,19 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg relative z-10">
+      <section className="py-12 lg:py-20 px-4 bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">
             Ready to Fix Your Device?
           </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-300 mb-6 lg:mb-8 max-w-2xl mx-auto text-sm lg:text-base">
             Get your mobile device repaired by certified technicians with genuine parts and warranty
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/repair-booking" className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-pink-500/25 transform hover:scale-105 morph-button">
+            <Link to="/repair-booking" className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-pink-500/25 transform hover:scale-105 morph-button text-sm lg:text-base">
               Book Repair Service
             </Link>
-            <Link to="/store" className="border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 morph-button">
+            <Link to="/store" className="border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 morph-button text-sm lg:text-base">
               Shop Accessories
             </Link>
           </div>

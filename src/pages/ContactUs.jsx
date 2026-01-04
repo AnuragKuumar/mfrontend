@@ -38,7 +38,7 @@ const ContactUs = () => {
       address: 'Ananda Gopal, Bhiringi Girls school, Benachity, Durgapur, West Bengal 713213',
       city: 'Durgapur, West Bengal',
       phone: '+91 7407926912',
-      email: 'support@mobirepair.com',
+      email: 'support@mobilerpairdurgapur.in',
       hours: 'Mon-Sat: 10:30 AM - 09:30 PM',
       mapUrl: 'https://maps.google.com/embed?pb=!1m18!1m12!1m3!1d3888.0!2d77.2090!3d28.5355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMyJzA3LjgiTiA3N8KwMTInMzIuNCJF!5e0!3m2!1sen!2sin!4v1234567890'
     }
@@ -106,10 +106,10 @@ const ContactUs = () => {
                 <p>Reach out anytime, we're here to</p>
                 <p>help.</p>
                 <a 
-                  href="mailto:support@mobirepair.com" 
+                  href="mailto:support@mobilerpairdurgapur.in" 
                   className="block text-pink-400 font-bold mt-4 hover:text-pink-300 transition-colors"
                 >
-                  support@mobirepair.com
+                  support@mobilerpairdurgapur.in
                 </a>
               </div>
             </div>
@@ -300,9 +300,9 @@ const ContactUs = () => {
                     <FiPhone className="w-5 h-5" />
                     <span>+91 7407926912</span>
                   </a>
-                  <a href="mailto:support@mobirepair.com" className="flex items-center space-x-3 text-gray-300 hover:text-pink-400 transition-colors">
+                  <a href="mailto:support@mobilerpairdurgapur.in" className="flex items-center space-x-3 text-gray-300 hover:text-pink-400 transition-colors">
                     <FiMail className="w-5 h-5" />
-                    <span>support@mobirepair.com</span>
+                    <span>support@mobilerpairdurgapur.in</span>
                   </a>
                   <a href="https://wa.me/917407926912" className="flex items-center space-x-3 text-gray-300 hover:text-green-400 transition-colors">
                     <FaWhatsapp className="w-5 h-5" />

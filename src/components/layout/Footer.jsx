@@ -102,7 +102,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <FiMail className="w-4 h-4 text-primary-400" />
-                <span className="text-dark-300 text-sm">support@mobirepair.com</span>
+                <span className="text-dark-300 text-sm">support@mobilerpairdurgapur.in</span>
               </div>
               <div className="flex items-start space-x-3">
                 <FiMapPin className="w-4 h-4 text-primary-400 mt-1" />

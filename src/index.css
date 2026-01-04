@@ -18,6 +18,23 @@
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden; /* Prevent horizontal scroll */
   }
+
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    body {
+      font-size: 14px;
+    }
+    
+    /* Prevent zoom on input focus on iOS */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    select,
+    textarea {
+      font-size: 16px !important;
+    }
+  }
 }
 
 @layer components {
@@ -47,6 +64,40 @@
   
   .gradient-text {
     @apply bg-gradient-to-r from-pink-400 to-purple-600 bg-clip-text text-transparent;
+  }
+
+  /* Mobile-specific utilities */
+  .mobile-container {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .mobile-text {
+    @apply text-sm sm:text-base;
+  }
+  
+  .mobile-heading {
+    @apply text-xl sm:text-2xl lg:text-3xl;
+  }
+  
+  .mobile-button {
+    @apply py-3 px-4 text-sm sm:py-4 sm:px-6 sm:text-base;
+  }
+  
+  .mobile-card {
+    @apply p-4 sm:p-6 lg:p-8;
+  }
+  
+  .mobile-grid {
+    @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+  }
+  
+  .mobile-gap {
+    @apply gap-4 sm:gap-6 lg:gap-8;
+  }
+
+  /* Prevent horizontal overflow */
+  .no-overflow {
+    @apply overflow-x-hidden max-w-full;
   }
   
   .section-padding {

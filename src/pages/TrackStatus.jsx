@@ -400,7 +400,7 @@ const TrackStatus = () => {
                 Call Support: +91 7407926912
               </a>
               <a
-                href="mailto:support@mobirepair.com"
+                href="mailto:support@mobilerpairdurgapur.in"
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
               >
                 <FiMail className="w-5 h-5 mr-2" />

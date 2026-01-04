@@ -48,7 +48,7 @@ const Navbar = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <FiMail className="w-4 h-4" />
-                <span>support@mobirepair.com</span>
+                <span>support@mobilerpairdurgapur.in</span>
               </div>
               <span className="hidden lg:block">Working Hours (MON-SAT) 10:30 AM - 09:30 PM</span>
             </div>

@@ -166,11 +166,11 @@ export const AuthProvider = ({ children }) => {
       }
 
       // Demo mode - simulate successful login
-      if (sanitizedData.email === 'demo@mobirepair.com' && sanitizedData.password === 'demo123') {
+      if (sanitizedData.email === 'demo@mobilerpairdurgapur.in' && sanitizedData.password === 'demo123') {
         const demoUser = {
           id: 'demo-user-123',
           name: 'Demo User',
-          email: 'demo@mobirepair.com',
+          email: 'demo@mobilerpairdurgapur.in',
           phone: '+91 7407926912',
           role: 'user'
         };
