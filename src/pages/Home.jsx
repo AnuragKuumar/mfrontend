@@ -59,7 +59,7 @@ const Home = () => {
             <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg rounded-2xl p-4 lg:p-8 border border-gray-700/50 hover:border-pink-500/50 transition-colors duration-300 shadow-xl order-1 lg:order-2">
               <div className="text-center mb-6 lg:mb-8">
                 <h1 className="text-xl lg:text-2xl font-bold text-white mb-4 leading-tight">
-                  Book Free Pickup for Device Repairs
+                  Book Free  Device Repairs
                 </h1>
               </div>
 
@@ -99,7 +99,7 @@ const Home = () => {
                 {/* Book Now Button */}
                 <button
                   onClick={handleContinue}
-                  className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold py-3 lg:py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-pink-500/25 transform hover:scale-105 btn-glow text-sm lg:text-base"
+                  className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold py-3 lg:py-4 px-6 rounded-lg transition-colors duration-300 shadow-lg text-sm lg:text-base"
                 >
                   Book Now
                 </button>
@@ -108,17 +108,17 @@ const Home = () => {
                 <div className="grid grid-cols-3 gap-2 lg:gap-4 pt-4 lg:pt-6 border-t border-gray-600/50">
                   <div className="text-center">
                     <div className="flex items-center justify-center mb-1">
-                      <FiStar className="text-yellow-400 w-3 h-3 lg:w-4 lg:h-4 mr-1 animate-pulse" />
+                      <FiStar className="text-yellow-400 w-3 h-3 lg:w-4 lg:h-4 mr-1" />
                       <span className="font-bold text-white text-xs lg:text-sm">4.7/5</span>
                     </div>
                     <p className="text-xs text-gray-400 leading-tight">Based on 7000+ Reviews</p>
                   </div>
                   <div className="text-center">
-                    <div className="font-bold text-pink-400 mb-1 animate-pulse text-xs lg:text-sm">1,25,000+</div>
+                    <div className="font-bold text-pink-400 mb-1 text-xs lg:text-sm">1,25,000+</div>
                     <p className="text-xs text-gray-400 leading-tight">Trusted by Customers</p>
                   </div>
                   <div className="text-center">
-                    <div className="font-bold text-green-400 mb-1 animate-pulse text-xs lg:text-sm">7000+</div>
+                    <div className="font-bold text-green-400 mb-1 text-xs lg:text-sm">7000+</div>
                     <p className="text-xs text-gray-400 leading-tight">Devices Pickup Completed</p>
                   </div>
                 </div>
@@ -147,33 +147,33 @@ const Home = () => {
                 Your Reliable Repair Partner
               </h2>
 
-              <div className="space-y-3 lg:space-y-4 stagger-animation">
-                <div className="flex items-center space-x-3 glow-on-hover p-3 rounded-lg bg-gray-700/30 backdrop-blur-sm">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center animate-pulse flex-shrink-0">
+              <div className="space-y-3 lg:space-y-4">
+                <div className="flex items-center space-x-3 p-3 rounded-lg bg-gray-700/30 backdrop-blur-sm transition-colors duration-200 hover:bg-gray-700/50">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white text-sm">1</span>
                   </div>
                   <span className="text-gray-300 text-sm lg:text-base">Free Checkup for your device</span>
                 </div>
-                <div className="flex items-center space-x-3 glow-on-hover p-3 rounded-lg bg-gray-700/30 backdrop-blur-sm">
-                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center animate-pulse flex-shrink-0">
+                <div className="flex items-center space-x-3 p-3 rounded-lg bg-gray-700/30 backdrop-blur-sm transition-colors duration-200 hover:bg-gray-700/50">
+                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white text-sm">2</span>
                   </div>
                   <span className="text-gray-300 text-sm lg:text-base">Free Pickup & Delivery</span>
                 </div>
-                <div className="flex items-center space-x-3 glow-on-hover p-3 rounded-lg bg-gray-700/30 backdrop-blur-sm">
-                  <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center animate-pulse flex-shrink-0">
+                <div className="flex items-center space-x-3 p-3 rounded-lg bg-gray-700/30 backdrop-blur-sm transition-colors duration-200 hover:bg-gray-700/50">
+                  <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white text-sm">3</span>
                   </div>
                   <span className="text-gray-300 text-sm lg:text-base">1,25,000+ Happy Customers</span>
                 </div>
-                <div className="flex items-center space-x-3 glow-on-hover p-3 rounded-lg bg-gray-700/30 backdrop-blur-sm">
-                  <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center animate-pulse flex-shrink-0">
+                <div className="flex items-center space-x-3 p-3 rounded-lg bg-gray-700/30 backdrop-blur-sm transition-colors duration-200 hover:bg-gray-700/50">
+                  <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white text-sm">4</span>
                   </div>
                   <span className="text-gray-300 text-sm lg:text-base">200+ Repairs Done per day</span>
                 </div>
-                <div className="flex items-center space-x-3 glow-on-hover p-3 rounded-lg bg-gray-700/30 backdrop-blur-sm">
-                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center animate-pulse flex-shrink-0">
+                <div className="flex items-center space-x-3 p-3 rounded-lg bg-gray-700/30 backdrop-blur-sm transition-colors duration-200 hover:bg-gray-700/50">
+                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white text-sm">5</span>
                   </div>
                   <span className="text-gray-300 text-sm lg:text-base">Repairs done under CCTV</span>
@@ -194,7 +194,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 stagger-animation">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
             {[
               { 
                 name: 'Display Replacement', 
@@ -233,7 +233,7 @@ const Home = () => {
                 desc: 'Camera not working or blurry images' 
               }
             ].map((service, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg rounded-xl p-4 lg:p-6 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-500 glow-on-hover shadow-xl">
+              <div key={index} className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg rounded-xl p-4 lg:p-6 border border-gray-700/50 hover:border-pink-500/50 transition-colors duration-300 shadow-xl">
                 <div className="text-center">
                   <div className="w-12 h-12 lg:w-16 lg:h-16 mx-auto mb-3 lg:mb-4 flex items-center justify-center bg-white/10 rounded-xl backdrop-blur-sm">
                     <img 
@@ -247,7 +247,7 @@ const Home = () => {
                   <p className="text-gray-300 text-xs lg:text-sm mb-3 lg:mb-4">{service.desc}</p>
                   <Link
                     to="/repair-booking"
-                    className="inline-flex items-center space-x-2 text-pink-400 hover:text-pink-300 transition-colors morph-button text-sm"
+                    className="inline-flex items-center space-x-2 text-pink-400 hover:text-pink-300 transition-colors text-sm"
                   >
                     <span>Book Now</span>
                     <FiArrowRight />
@@ -269,10 +269,10 @@ const Home = () => {
             Get your mobile device repaired by certified technicians with genuine parts and warranty
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/repair-booking" className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-pink-500/25 transform hover:scale-105 morph-button text-sm lg:text-base">
+            <Link to="/repair-booking" className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 shadow-lg text-sm lg:text-base">
               Book Repair Service
             </Link>
-            <Link to="/store" className="border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 morph-button text-sm lg:text-base">
+            <Link to="/store" className="border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 text-sm lg:text-base">
               Shop Accessories
             </Link>
           </div>
