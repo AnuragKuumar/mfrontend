@@ -139,7 +139,7 @@ const Home = () => {
                 <img 
                   src="/images/mkitone-logo.svg" 
                   alt="Mobi repair Logo" 
-                  className="w-12 h-12 lg:w-16 lg:h-16 animate-pulse"
+                  className="w-12 h-12 lg:w-16 lg:h-16"
                 />
               </div>
               
@@ -236,7 +236,7 @@ const Home = () => {
             ].map((service, index) => (
               <div key={index} className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg rounded-xl p-4 lg:p-6 border border-gray-700/50 hover:border-pink-500/50 transition-colors duration-300 shadow-xl relative">
                 {service.comingSoon && (
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-medium animate-pulse">
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-medium">
                     Coming Soon
                   </div>
                 )}

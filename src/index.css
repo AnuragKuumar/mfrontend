@@ -30,6 +30,11 @@
     backface-visibility: hidden;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+    /* Additional mobile optimizations */
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
   }
 
   /* Mobile-specific improvements */
@@ -52,9 +57,28 @@
   /* Performance optimization - reduce animations on mobile */
   @media (max-width: 768px) {
     *, *::before, *::after {
-      animation-duration: 0.3s !important;
+      animation-duration: 0.2s !important;
       animation-delay: 0s !important;
-      transition-duration: 0.2s !important;
+      transition-duration: 0.15s !important;
+    }
+    
+    /* Disable problematic animations on mobile */
+    .animate-pulse {
+      animation: none !important;
+    }
+    
+    /* Optimize transforms for mobile */
+    .transform {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    
+    /* Prevent layout shifts */
+    img {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
   }
 
@@ -1788,5 +1812,71 @@
   .small-mobile-btn {
     padding: 10px 16px;
     font-size: 14px;
+  }
+}
+/* Mobile-specific performance optimizations */
+@media (max-width: 768px) {
+  /* Disable hardware acceleration on problematic elements */
+  .mobile-optimized {
+    -webkit-transform: none !important;
+    transform: none !important;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+  }
+  
+  /* Optimize gradients for mobile */
+  .bg-gradient-to-br,
+  .bg-gradient-to-r,
+  .bg-gradient-to-l,
+  .bg-gradient-to-t,
+  .bg-gradient-to-b {
+    background-attachment: scroll !important;
+  }
+  
+  /* Prevent backdrop-blur issues on mobile */
+  .backdrop-blur-lg,
+  .backdrop-blur-sm {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  
+  /* Simplify shadows on mobile */
+  .shadow-xl,
+  .shadow-lg {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Optimize transitions */
+  .transition-all,
+  .transition-colors,
+  .transition-transform {
+    transition-duration: 0.15s !important;
+    transition-timing-function: ease-out !important;
+  }
+  
+  /* Prevent animation conflicts */
+  .hover\:scale-105:hover {
+    transform: none !important;
+  }
+  
+  .hover\:shadow-lg:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  }
+}
+
+/* Ultra-mobile optimizations for very small screens */
+@media (max-width: 480px) {
+  /* Disable all animations on very small screens */
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  /* Keep only essential transitions */
+  button,
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    transition: background-color 0.1s ease !important;
   }
 }
