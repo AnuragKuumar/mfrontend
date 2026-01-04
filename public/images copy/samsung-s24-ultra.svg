@@ -1,0 +1,78 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4a5568;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d3748;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a202c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cameraGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a202c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d3748;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Phone Shadow -->
+  <ellipse cx="205" cy="380" rx="120" ry="15" fill="#000000" opacity="0.2"/>
+  
+  <!-- Phone Body -->
+  <rect x="70" y="30" width="260" height="340" rx="30" ry="30" fill="url(#phoneGradient)" stroke="#4a5568" stroke-width="1"/>
+  
+  <!-- Screen -->
+  <rect x="85" y="60" width="230" height="280" rx="20" ry="20" fill="url(#screenGradient)"/>
+  
+  <!-- Camera Module Background -->
+  <rect x="80" y="40" width="80" height="25" rx="12" ry="12" fill="url(#cameraGradient)" stroke="#4a5568" stroke-width="0.5"/>
+  
+  <!-- Camera Lenses -->
+  <circle cx="100" cy="52.5" r="6" fill="#1a202c" stroke="#4a5568" stroke-width="0.5"/>
+  <circle cx="100" cy="52.5" r="4" fill="#000000"/>
+  <circle cx="100" cy="52.5" r="2" fill="#2563eb" opacity="0.3"/>
+  
+  <circle cx="125" cy="52.5" r="6" fill="#1a202c" stroke="#4a5568" stroke-width="0.5"/>
+  <circle cx="125" cy="52.5" r="4" fill="#000000"/>
+  <circle cx="125" cy="52.5" r="2" fill="#2563eb" opacity="0.3"/>
+  
+  <circle cx="145" cy="52.5" r="4" fill="#1a202c" stroke="#4a5568" stroke-width="0.5"/>
+  <circle cx="145" cy="52.5" r="2.5" fill="#000000"/>
+  
+  <!-- Flash -->
+  <rect x="155" y="49" width="4" height="7" rx="2" ry="2" fill="#fbbf24"/>
+  
+  <!-- Samsung Logo -->
+  <text x="200" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="300" fill="#9ca3af" text-anchor="middle">SAMSUNG</text>
+  
+  <!-- Galaxy S24 Ultra Text -->
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="24" font-weight="300" fill="#f3f4f6" text-anchor="middle">Galaxy S24</text>
+  <text x="200" y="210" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#f3f4f6" text-anchor="middle">Ultra</text>
+  
+  <!-- S Pen Slot -->
+  <rect x="295" y="120" width="6" height="50" rx="3" ry="3" fill="#1a202c" stroke="#4a5568" stroke-width="0.5"/>
+  <rect x="297" y="125" width="2" height="40" rx="1" ry="1" fill="#6b7280"/>
+  
+  <!-- Screen UI Elements -->
+  <rect x="100" y="250" width="200" height="3" rx="1.5" ry="1.5" fill="#374151"/>
+  <rect x="100" y="260" width="150" height="2" rx="1" ry="1" fill="#4b5563"/>
+  <rect x="100" y="270" width="180" height="2" rx="1" ry="1" fill="#4b5563"/>
+  <rect x="100" y="280" width="120" height="2" rx="1" ry="1" fill="#4b5563"/>
+  
+  <!-- App Icons -->
+  <rect x="110" y="140" width="15" height="15" rx="3" ry="3" fill="#3b82f6"/>
+  <rect x="135" y="140" width="15" height="15" rx="3" ry="3" fill="#ef4444"/>
+  <rect x="160" y="140" width="15" height="15" rx="3" ry="3" fill="#10b981"/>
+  <rect x="185" y="140" width="15" height="15" rx="3" ry="3" fill="#f59e0b"/>
+  
+  <!-- Home Indicator -->
+  <rect x="180" y="350" width="40" height="3" rx="1.5" ry="1.5" fill="#6b7280"/>
+  
+  <!-- Side Buttons -->
+  <rect x="65" y="100" width="3" height="20" rx="1.5" ry="1.5" fill="#4a5568"/>
+  <rect x="65" y="130" width="3" height="15" rx="1.5" ry="1.5" fill="#4a5568"/>
+  <rect x="65" y="150" width="3" height="15" rx="1.5" ry="1.5" fill="#4a5568"/>
+  
+  <!-- Highlight -->
+  <rect x="85" y="60" width="230" height="40" rx="20" ry="20" fill="url(#screenGradient)" opacity="0.1"/>
+</svg>

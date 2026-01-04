@@ -1,0 +1,74 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iphoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#374151;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1f2937;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a202c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Phone Shadow -->
+  <ellipse cx="205" cy="380" rx="120" ry="15" fill="#000000" opacity="0.2"/>
+  
+  <!-- Phone Body (Titanium) -->
+  <rect x="75" y="35" width="250" height="330" rx="28" ry="28" fill="url(#iphoneGradient)" stroke="#6b7280" stroke-width="1"/>
+  
+  <!-- Screen -->
+  <rect x="90" y="65" width="220" height="270" rx="22" ry="22" fill="url(#screenGradient)"/>
+  
+  <!-- Dynamic Island -->
+  <rect x="170" y="75" width="60" height="20" rx="10" ry="10" fill="#000000"/>
+  
+  <!-- Camera Module -->
+  <rect x="85" y="45" width="50" height="50" rx="15" ry="15" fill="#1a202c" stroke="#4a5568" stroke-width="0.5"/>
+  
+  <!-- Main Camera -->
+  <circle cx="105" cy="60" r="8" fill="#1a202c" stroke="#4a5568" stroke-width="0.5"/>
+  <circle cx="105" cy="60" r="6" fill="#000000"/>
+  <circle cx="105" cy="60" r="3" fill="#3b82f6" opacity="0.3"/>
+  
+  <!-- Ultra Wide Camera -->
+  <circle cx="120" cy="75" r="6" fill="#1a202c" stroke="#4a5568" stroke-width="0.5"/>
+  <circle cx="120" cy="75" r="4" fill="#000000"/>
+  
+  <!-- Telephoto Camera -->
+  <circle cx="105" cy="80" r="6" fill="#1a202c" stroke="#4a5568" stroke-width="0.5"/>
+  <circle cx="105" cy="80" r="4" fill="#000000"/>
+  
+  <!-- Flash -->
+  <circle cx="125" cy="60" r="3" fill="#fbbf24"/>
+  
+  <!-- Apple Logo -->
+  <circle cx="200" cy="120" r="12" fill="#f3f4f6" opacity="0.8"/>
+  <path d="M200 108 C205 108, 210 113, 210 118 C210 123, 205 128, 200 128 C195 128, 190 123, 190 118 C190 113, 195 108, 200 108 Z M198 110 C198 112, 200 114, 202 114" fill="#1a202c"/>
+  
+  <!-- iPhone Text -->
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="20" font-weight="300" fill="#f3f4f6" text-anchor="middle">iPhone 15</text>
+  <text x="200" y="210" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#f3f4f6" text-anchor="middle">Pro Max</text>
+  
+  <!-- Screen UI Elements -->
+  <rect x="110" y="250" width="180" height="3" rx="1.5" ry="1.5" fill="#374151"/>
+  <rect x="110" y="260" width="140" height="2" rx="1" ry="1" fill="#4b5563"/>
+  <rect x="110" y="270" width="160" height="2" rx="1" ry="1" fill="#4b5563"/>
+  
+  <!-- App Icons -->
+  <rect x="120" y="140" width="12" height="12" rx="2" ry="2" fill="#007aff"/>
+  <rect x="140" y="140" width="12" height="12" rx="2" ry="2" fill="#ff3b30"/>
+  <rect x="160" y="140" width="12" height="12" rx="2" ry="2" fill="#34c759"/>
+  <rect x="180" y="140" width="12" height="12" rx="2" ry="2" fill="#ff9500"/>
+  
+  <!-- Home Indicator -->
+  <rect x="180" y="345" width="40" height="3" rx="1.5" ry="1.5" fill="#6b7280"/>
+  
+  <!-- Side Buttons -->
+  <rect x="70" y="110" width="3" height="25" rx="1.5" ry="1.5" fill="#6b7280"/>
+  <rect x="70" y="140" width="3" height="15" rx="1.5" ry="1.5" fill="#6b7280"/>
+  <rect x="70" y="160" width="3" height="15" rx="1.5" ry="1.5" fill="#6b7280"/>
+  
+  <!-- Action Button -->
+  <rect x="330" y="120" width="3" height="12" rx="1.5" ry="1.5" fill="#ff9500"/>
+</svg>
