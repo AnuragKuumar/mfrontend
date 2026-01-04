@@ -21,47 +21,11 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="gradient-mesh"></div>
-      <div className="glow-orb glow-orb-1"></div>
-      <div className="glow-orb glow-orb-2"></div>
-      <div className="glow-orb glow-orb-3"></div>
-      
-      {/* Floating Elements */}
-      <div className="floating-elements">
-        <div className="floating-element"></div>
-        <div className="floating-element"></div>
-        <div className="floating-element"></div>
-        <div className="floating-element"></div>
-      </div>
-      
-      {/* Particle System */}
-      <div className="particles">
-        {[...Array(15)].map((_, i) => (
-          <div 
-            key={i} 
-            className="particle" 
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 15}s`,
-              animationDuration: `${15 + Math.random() * 10}s`
-            }}
-          ></div>
-        ))}
-      </div>
-
-      {/* Morphing Shapes */}
+      {/* Simplified Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-full animate-pulse transform rotate-45"></div>
-        <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-1/4 left-1/2 w-40 h-40 bg-gradient-to-r from-purple-500/15 to-pink-500/15 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
-      </div>
-
-      {/* Liquid Background Effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -left-40 w-80 h-80 bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-full blur-3xl animate-bounce" style={{animationDuration: '8s'}}></div>
-        <div className="absolute top-1/2 -right-40 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-green-500/10 rounded-full blur-3xl animate-bounce" style={{animationDuration: '12s', animationDelay: '2s'}}></div>
-        <div className="absolute -bottom-40 left-1/2 w-72 h-72 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-bounce" style={{animationDuration: '10s', animationDelay: '4s'}}></div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-full"></div>
+        <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-gradient-to-r from-blue-500/10 to-green-500/10 rounded-full"></div>
+        <div className="absolute bottom-1/4 left-1/2 w-40 h-40 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full"></div>
       </div>
       {/* Main Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 py-8 relative z-10">
@@ -69,7 +33,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             
             {/* Left Side - Your SVG File */}
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 to-purple-600 min-h-[300px] lg:min-h-[400px] flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-500 glow-on-hover order-2 lg:order-1">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 to-purple-600 min-h-[300px] lg:min-h-[400px] flex items-center justify-center shadow-xl transition-shadow duration-300 order-2 lg:order-1">
               <img 
                 src="/images/file.svg" 
                 alt="Professional iPhone Repair Service" 
@@ -92,7 +56,7 @@ const Home = () => {
             </div>
 
             {/* Right Side - Booking Form */}
-            <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg rounded-2xl p-4 lg:p-8 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-500 shadow-xl glow-on-hover order-1 lg:order-2">
+            <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg rounded-2xl p-4 lg:p-8 border border-gray-700/50 hover:border-pink-500/50 transition-colors duration-300 shadow-xl order-1 lg:order-2">
               <div className="text-center mb-6 lg:mb-8">
                 <h1 className="text-xl lg:text-2xl font-bold text-white mb-4 leading-tight">
                   Book Free Pickup for Device Repairs

@@ -35,23 +35,42 @@
       font-size: 16px !important;
     }
   }
+
+  /* Performance optimization - reduce animations on mobile */
+  @media (max-width: 768px) {
+    *, *::before, *::after {
+      animation-duration: 0.3s !important;
+      animation-delay: 0s !important;
+      transition-duration: 0.2s !important;
+    }
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-pink-500 hover:bg-pink-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 hover:shadow-lg;
+    @apply bg-pink-500 hover:bg-pink-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
   }
   
   .btn-secondary {
-    @apply bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 border border-gray-600 transform hover:scale-105;
+    @apply bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 border border-gray-600;
   }
   
   .btn-outline {
-    @apply border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+    @apply border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200;
   }
   
   .input-field {
-    @apply w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300;
+    @apply w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-colors duration-200;
   }
   
   .card {
@@ -59,7 +78,7 @@
   }
   
   .card-hover {
-    @apply card hover:border-pink-500 hover:shadow-2xl hover:shadow-pink-500/10 transition-all duration-500 cursor-pointer transform hover:-translate-y-2 hover:scale-105;
+    @apply card hover:border-pink-500 hover:shadow-xl transition-all duration-200 cursor-pointer;
   }
   
   .gradient-text {
