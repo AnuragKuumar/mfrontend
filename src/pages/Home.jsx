@@ -227,13 +227,19 @@ const Home = () => {
                 desc: 'Device got wet or water damaged' 
               },
               { 
-                name: 'Camera Repair', 
+                name: 'In-Door Service', 
                 logo: '/images/mkitone-logo.svg', 
-                brand: 'All Brands',
-                desc: 'Camera not working or blurry images' 
+                brand: 'Coming Soon',
+                desc: 'Professional repair at your location',
+                comingSoon: true
               }
             ].map((service, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg rounded-xl p-4 lg:p-6 border border-gray-700/50 hover:border-pink-500/50 transition-colors duration-300 shadow-xl">
+              <div key={index} className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg rounded-xl p-4 lg:p-6 border border-gray-700/50 hover:border-pink-500/50 transition-colors duration-300 shadow-xl relative">
+                {service.comingSoon && (
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-medium animate-pulse">
+                    Coming Soon
+                  </div>
+                )}
                 <div className="text-center">
                   <div className="w-12 h-12 lg:w-16 lg:h-16 mx-auto mb-3 lg:mb-4 flex items-center justify-center bg-white/10 rounded-xl backdrop-blur-sm">
                     <img 
@@ -243,15 +249,24 @@ const Home = () => {
                     />
                   </div>
                   <h3 className="text-base lg:text-lg font-semibold text-white mb-2">{service.name}</h3>
-                  <p className="text-pink-400 text-xs lg:text-sm font-medium mb-2">{service.brand}</p>
+                  <p className={`text-xs lg:text-sm font-medium mb-2 ${service.comingSoon ? 'text-purple-400' : 'text-pink-400'}`}>{service.brand}</p>
                   <p className="text-gray-300 text-xs lg:text-sm mb-3 lg:mb-4">{service.desc}</p>
-                  <Link
-                    to="/repair-booking"
-                    className="inline-flex items-center space-x-2 text-pink-400 hover:text-pink-300 transition-colors text-sm"
-                  >
-                    <span>Book Now</span>
-                    <FiArrowRight />
-                  </Link>
+                  {service.comingSoon ? (
+                    <button
+                      disabled
+                      className="inline-flex items-center space-x-2 text-gray-500 cursor-not-allowed text-sm"
+                    >
+                      <span>Coming Soon</span>
+                    </button>
+                  ) : (
+                    <Link
+                      to="/repair-booking"
+                      className="inline-flex items-center space-x-2 text-pink-400 hover:text-pink-300 transition-colors text-sm"
+                    >
+                      <span>Book Now</span>
+                      <FiArrowRight />
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}

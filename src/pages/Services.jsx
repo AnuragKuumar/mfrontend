@@ -100,11 +100,26 @@ const Services = () => {
         'Free delivery back to you',
         'Extra convenience charge: ₹99'
       ],
-      recommended: true
+      recommended: true,
+      available: true
+    },
+    {
+      title: 'In-Door Service',
+      icon: <FiShield className="w-8 h-8 text-purple-400" />,
+      description: 'Professional repair service at your home or office',
+      features: [
+        'Technician visits your location',
+        'Repair done at your premises',
+        'Watch the repair process',
+        'Premium service experience'
+      ],
+      recommended: false,
+      available: false,
+      comingSoon: true
     },
     {
       title: 'Store Visit',
-      icon: <FiShield className="w-8 h-8 text-green-400" />,
+      icon: <FiClock className="w-8 h-8 text-green-400" />,
       description: 'Visit our service center for immediate assistance',
       features: [
         'Walk-in service available',
@@ -112,7 +127,8 @@ const Services = () => {
         'Watch your repair process',
         'No additional charges'
       ],
-      recommended: false
+      recommended: false,
+      available: true
     }
   ];
 
@@ -398,12 +414,18 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 justify-center">
+          <div className="grid lg:grid-cols-3 gap-8 justify-center">
             {serviceOptions.map((option, index) => (
-              <div key={index} className={`card relative ${option.recommended ? 'border-primary-500' : ''}`}>
+              <div key={index} className={`card relative ${option.recommended ? 'border-primary-500' : ''} ${!option.available ? 'opacity-75' : ''}`}>
                 {option.recommended && (
                   <div className="absolute -top-3 left-6 bg-primary-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                     Recommended
+                  </div>
+                )}
+                
+                {option.comingSoon && (
+                  <div className="absolute -top-3 right-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium animate-pulse">
+                    Coming Soon
                   </div>
                 )}
                 
@@ -415,7 +437,7 @@ const Services = () => {
                   <p className="text-dark-300 text-sm">{option.description}</p>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-3 mb-6">
                   {option.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-2">
                       <FiCheck className="w-4 h-4 text-green-400 flex-shrink-0" />
@@ -423,6 +445,23 @@ const Services = () => {
                     </div>
                   ))}
                 </div>
+
+                {option.available ? (
+                  <Link
+                    to="/repair-booking"
+                    className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2"
+                  >
+                    <span>Book Now</span>
+                    <FiArrowRight />
+                  </Link>
+                ) : (
+                  <button
+                    disabled
+                    className="w-full bg-gray-600 text-gray-400 font-semibold py-3 px-4 rounded-lg cursor-not-allowed flex items-center justify-center space-x-2"
+                  >
+                    <span>Coming Soon</span>
+                  </button>
+                )}
               </div>
             ))}
           </div>
