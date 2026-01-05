@@ -33,10 +33,10 @@ import ProtectedRoute from './components/common/ProtectedRoute';
 
 // Loading Component
 const PageLoader = () => (
-  <div className="min-h-screen bg-black flex items-center justify-center">
+  <div className="min-h-screen bg-white flex items-center justify-center">
     <div className="flex flex-col items-center space-y-4">
-      <div className="w-8 h-8 border-2 border-pink-500 border-t-transparent rounded-full animate-spin"></div>
-      <p className="text-gray-400 text-sm">Loading...</p>
+      <div className="w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+      <p className="text-gray-600 text-sm">Loading...</p>
     </div>
   </div>
 );
@@ -68,7 +68,7 @@ const PageTransition = ({ children }) => {
 
 function AppContent() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-gray-900">
       <Navbar />
       
       <main className="min-h-screen">
@@ -112,9 +112,9 @@ function AppContent() {
         toastOptions={{
           duration: 4000,
           style: {
-            background: '#1e293b',
-            color: '#fff',
-            border: '1px solid #475569',
+            background: '#ffffff',
+            color: '#1f2937',
+            border: '1px solid #e5e7eb',
           },
           success: {
             className: 'toast-success',
@@ -134,7 +134,7 @@ function App() {
     initializeSecurity();
     
     // Prevent mobile flicker by ensuring styles are loaded
-    document.documentElement.style.setProperty('--initial-color-mode', 'dark');
+    document.documentElement.style.setProperty('--initial-color-mode', 'light');
   }, []);
 
   return (
@@ -147,3 +147,5 @@ function App() {
     </AuthProvider>
   );
 }
+
+export default App;
