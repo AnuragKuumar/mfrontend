@@ -1,12 +1,32 @@
 import { Link } from 'react-router-dom';
-import { FiArrowRight, FiCheck, FiShield, FiTruck, FiClock } from 'react-icons/fi';
+import { 
+  FiArrowRight, 
+  FiCheck, 
+  FiShield, 
+  FiTruck, 
+  FiClock,
+  FiSmartphone,
+  FiBattery,
+  FiZap,
+  FiMic,
+  FiDroplet,
+  FiCamera
+} from 'react-icons/fi';
+import { 
+  MdPhoneIphone,
+  MdBatteryChargingFull,
+  MdPowerInput,
+  MdVolumeUp,
+  MdWaterDrop,
+  MdCameraAlt
+} from 'react-icons/md';
 
 const Services = () => {
   const services = [
     {
       id: 1,
       name: 'Display Replacement',
-      icon: '📱',
+      icon: <MdPhoneIphone className="w-12 h-12 text-blue-400" />,
       description: 'Professional screen replacement for cracked, damaged, or unresponsive displays',
       features: [
         'Original quality displays',
@@ -20,7 +40,7 @@ const Services = () => {
     {
       id: 2,
       name: 'Battery Replacement',
-      icon: '🔋',
+      icon: <MdBatteryChargingFull className="w-12 h-12 text-green-400" />,
       description: 'Replace old, degraded batteries to restore your device\'s battery life',
       features: [
         'High capacity batteries',
@@ -34,7 +54,7 @@ const Services = () => {
     {
       id: 3,
       name: 'Charging Port Repair',
-      icon: '🔌',
+      icon: <MdPowerInput className="w-12 h-12 text-yellow-400" />,
       description: 'Fix charging issues, loose connections, and damaged charging ports',
       features: [
         'Complete port replacement',
@@ -48,7 +68,7 @@ const Services = () => {
     {
       id: 4,
       name: 'Speaker/Mic Repair',
-      icon: '🔊',
+      icon: <MdVolumeUp className="w-12 h-12 text-purple-400" />,
       description: 'Restore audio quality and fix microphone issues for clear communication',
       features: [
         'Audio quality testing',
@@ -62,7 +82,7 @@ const Services = () => {
     {
       id: 5,
       name: 'Water Damage Repair',
-      icon: '💧',
+      icon: <MdWaterDrop className="w-12 h-12 text-cyan-400" />,
       description: 'Professional water damage restoration to save your device and data',
       features: [
         'Complete disassembly',
@@ -76,7 +96,7 @@ const Services = () => {
     {
       id: 6,
       name: 'Camera Repair',
-      icon: '📷',
+      icon: <MdCameraAlt className="w-12 h-12 text-red-400" />,
       description: 'Fix camera issues including blurry images, focus problems, and lens damage',
       features: [
         'Camera module replacement',
@@ -376,7 +396,7 @@ const Services = () => {
                 )}
                 
                 <div className="text-center mb-6">
-                  <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300 magnetic-hover">{service.icon}</div>
+                  <div className="flex justify-center mb-4 transform group-hover:scale-110 transition-transform duration-300 magnetic-hover">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-pink-400 transition-colors duration-300">{service.name}</h3>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">{service.description}</p>
                   <div className="text-pink-400 font-bold text-lg">{service.price}</div>

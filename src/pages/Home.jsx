@@ -1,6 +1,15 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FiStar, FiArrowRight } from 'react-icons/fi';
+import { 
+  MdPhoneIphone,
+  MdBatteryChargingFull,
+  MdPowerInput,
+  MdVolumeUp,
+  MdWaterDrop,
+  MdCameraAlt,
+  MdHomeRepairService
+} from 'react-icons/md';
 
 const Home = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -47,7 +56,7 @@ const Home = () => {
               {/* Fallback if SVG doesn't load */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl flex items-center justify-center" style={{ display: 'none' }}>
                 <div className="text-center text-white p-4 lg:p-8">
-                  <div className="text-4xl lg:text-6xl mb-4">📱</div>
+                  <MdPhoneIphone className="w-16 h-16 lg:w-24 lg:h-24 mx-auto mb-4 text-white" />
                   <h3 className="text-xl lg:text-2xl font-bold mb-2">Professional iPhone Repair</h3>
                   <p className="text-base lg:text-lg opacity-90">Expert service with genuine parts</p>
                 </div>
@@ -198,37 +207,37 @@ const Home = () => {
             {[
               { 
                 name: 'Display Replacement', 
-                logo: '/images/iphone-15-pro.svg', 
+                icon: <MdPhoneIphone className="w-8 h-8 lg:w-10 lg:h-10 text-blue-400" />,
                 brand: 'iPhone',
                 desc: 'Cracked or damaged screen repair' 
               },
               { 
                 name: 'Battery Replacement', 
-                logo: '/images/samsung-s24-ultra.svg', 
+                icon: <MdBatteryChargingFull className="w-8 h-8 lg:w-10 lg:h-10 text-green-400" />,
                 brand: 'Samsung',
                 desc: 'Poor battery life or charging issues' 
               },
               { 
                 name: 'Charging Port Repair', 
-                logo: '/images/mkitone-logo.svg', 
+                icon: <MdPowerInput className="w-8 h-8 lg:w-10 lg:h-10 text-yellow-400" />,
                 brand: 'All Brands',
                 desc: 'Charging port not working properly' 
               },
               { 
                 name: 'Speaker/Mic Repair', 
-                logo: '/images/iphone-15-pro.svg', 
+                icon: <MdVolumeUp className="w-8 h-8 lg:w-10 lg:h-10 text-purple-400" />,
                 brand: 'iPhone',
                 desc: 'Audio issues and microphone problems' 
               },
               { 
                 name: 'Water Damage Repair', 
-                logo: '/images/samsung-s24-ultra.svg', 
+                icon: <MdWaterDrop className="w-8 h-8 lg:w-10 lg:h-10 text-cyan-400" />,
                 brand: 'Samsung',
                 desc: 'Device got wet or water damaged' 
               },
               { 
                 name: 'In-Door Service', 
-                logo: '/images/mkitone-logo.svg', 
+                icon: <MdHomeRepairService className="w-8 h-8 lg:w-10 lg:h-10 text-orange-400" />,
                 brand: 'Coming Soon',
                 desc: 'Professional repair at your location',
                 comingSoon: true
@@ -242,11 +251,7 @@ const Home = () => {
                 )}
                 <div className="text-center">
                   <div className="w-12 h-12 lg:w-16 lg:h-16 mx-auto mb-3 lg:mb-4 flex items-center justify-center bg-white/10 rounded-xl backdrop-blur-sm">
-                    <img 
-                      src={service.logo} 
-                      alt={service.brand} 
-                      className="w-8 h-8 lg:w-10 lg:h-10 object-contain"
-                    />
+                    {service.icon}
                   </div>
                   <h3 className="text-base lg:text-lg font-semibold text-white mb-2">{service.name}</h3>
                   <p className={`text-xs lg:text-sm font-medium mb-2 ${service.comingSoon ? 'text-purple-400' : 'text-pink-400'}`}>{service.brand}</p>
