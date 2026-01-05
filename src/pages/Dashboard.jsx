@@ -10,6 +10,14 @@ import {
   FiEye,
   FiPlus
 } from 'react-icons/fi';
+import { 
+  MdPhoneIphone,
+  MdBatteryChargingFull,
+  MdPowerInput,
+  MdVolumeUp,
+  MdWaterDrop,
+  MdCameraAlt
+} from 'react-icons/md';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
@@ -116,6 +124,44 @@ const Dashboard = () => {
       style: 'currency',
       currency: 'INR'
     }).format(amount);
+  };
+
+  const getServiceIcon = (serviceType) => {
+    const service = serviceType?.toLowerCase() || '';
+    if (service.includes('display') || service.includes('screen')) {
+      return <MdPhoneIphone className="w-5 h-5 text-white" />;
+    } else if (service.includes('battery')) {
+      return <MdBatteryChargingFull className="w-5 h-5 text-white" />;
+    } else if (service.includes('charging') || service.includes('port')) {
+      return <MdPowerInput className="w-5 h-5 text-white" />;
+    } else if (service.includes('speaker') || service.includes('mic') || service.includes('audio')) {
+      return <MdVolumeUp className="w-5 h-5 text-white" />;
+    } else if (service.includes('water') || service.includes('damage')) {
+      return <MdWaterDrop className="w-5 h-5 text-white" />;
+    } else if (service.includes('camera')) {
+      return <MdCameraAlt className="w-5 h-5 text-white" />;
+    } else {
+      return <FiTool className="w-5 h-5 text-white" />;
+    }
+  };
+
+  const getServiceGradient = (serviceType) => {
+    const service = serviceType?.toLowerCase() || '';
+    if (service.includes('display') || service.includes('screen')) {
+      return 'linear-gradient(to right, #3b82f6, #1d4ed8)'; // Blue
+    } else if (service.includes('battery')) {
+      return 'linear-gradient(to right, #10b981, #059669)'; // Green
+    } else if (service.includes('charging') || service.includes('port')) {
+      return 'linear-gradient(to right, #f59e0b, #d97706)'; // Yellow/Orange
+    } else if (service.includes('speaker') || service.includes('mic') || service.includes('audio')) {
+      return 'linear-gradient(to right, #8b5cf6, #7c3aed)'; // Purple
+    } else if (service.includes('water') || service.includes('damage')) {
+      return 'linear-gradient(to right, #06b6d4, #0891b2)'; // Cyan
+    } else if (service.includes('camera')) {
+      return 'linear-gradient(to right, #ef4444, #dc2626)'; // Red
+    } else {
+      return 'linear-gradient(to right, #6b7280, #4b5563)'; // Gray
+    }
   };
 
   const stats = [
@@ -351,9 +397,9 @@ const Dashboard = () => {
                       <div className="flex items-center space-x-3">
                         <div 
                           className="w-10 h-10 rounded-lg flex items-center justify-center"
-                          style={{background: 'linear-gradient(to right, #3b82f6, #8b5cf6)'}}
+                          style={{background: getServiceGradient(booking.serviceType)}}
                         >
-                          <FiTool className="w-5 h-5 text-white" />
+                          {getServiceIcon(booking.serviceType)}
                         </div>
                         <div>
                           <p className="text-white font-medium">{booking.deviceBrand} {booking.deviceModel}</p>
@@ -487,8 +533,11 @@ const Dashboard = () => {
                     <tr key={booking._id} className="border-b border-gray-700/30 hover:bg-gray-700/20 transition-colors">
                       <td className="py-4 px-4">
                         <div className="flex items-center space-x-3">
-                          <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                            <FiTool className="w-5 h-5 text-white" />
+                          <div 
+                            className="w-10 h-10 rounded-lg flex items-center justify-center"
+                            style={{background: getServiceGradient(booking.serviceType)}}
+                          >
+                            {getServiceIcon(booking.serviceType)}
                           </div>
                           <div>
                             <p className="text-white font-medium">{booking.deviceBrand}</p>
