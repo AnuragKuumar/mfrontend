@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { FiUser, FiMail, FiPhone, FiSmartphone, FiTool, FiMessageSquare, FiCheck, FiArrowLeft } from 'react-icons/fi';
@@ -86,7 +86,7 @@ const RepairBooking = () => {
   };
 
   const validateForm = () => {
-    const required = ['name', 'email', 'phone', 'deviceBrand', 'issueType', 'issueDescription'];
+    const required = ['name', 'phone', 'deviceBrand', 'issueType', 'issueDescription'];
     const missing = required.filter(field => !formData[field].trim());
     
     if (missing.length > 0) {
@@ -94,11 +94,13 @@ const RepairBooking = () => {
       return false;
     }
 
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      toast.error('Please enter a valid email address');
-      return false;
+    // Email validation (only if email is provided)
+    if (formData.email.trim()) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email)) {
+        toast.error('Please enter a valid email address');
+        return false;
+      }
     }
 
     // Phone validation
@@ -122,7 +124,7 @@ const RepairBooking = () => {
       const bookingData = {
         customerDetails: {
           name: formData.name,
-          email: formData.email,
+          email: formData.email || null, // Allow null for optional email
           phone: formData.phone,
           address: formData.address
         },
@@ -332,7 +334,7 @@ const RepairBooking = () => {
                   <div>
                     <label className="block text-white font-medium mb-3">
                       <FiMail className="w-4 h-4 inline mr-2" />
-                      Email Address *
+                      Email Address (Optional)
                     </label>
                     <input
                       type="email"
@@ -340,7 +342,6 @@ const RepairBooking = () => {
                       onChange={(e) => handleInputChange('email', e.target.value)}
                       className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
                       placeholder="Enter your email address"
-                      required
                     />
                   </div>
                 </div>
@@ -523,6 +524,9 @@ const RepairBooking = () => {
                 
                 <p className="text-gray-400 text-sm text-center mt-4">
                   📞 We will contact you within 2 hours to confirm your booking
+                </p>
+                <p className="text-yellow-400 text-xs text-center mt-2 font-medium">
+                  📱 Display replacement comes with 7 days replacement warranty - Terms and conditions apply
                 </p>
               </div>
             </form>

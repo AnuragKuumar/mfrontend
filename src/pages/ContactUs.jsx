@@ -45,14 +45,14 @@ const ContactUs = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-gray-900">
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-            Contact <span className="bg-gradient-to-r from-pink-400 to-purple-600 bg-clip-text text-transparent">Us</span>
+            Contact <span className="text-blue-600">Us</span>
           </h1>
-          <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
             Get in touch with us for any queries, support, or feedback. We're here to help!
           </p>
         </div>
@@ -64,32 +64,32 @@ const ContactUs = () => {
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             
             {/* Visit Us */}
-            <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700 text-center hover:border-pink-500 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white rounded-2xl p-8 border border-gray-200 text-center hover:border-blue-500 transition-all duration-300 shadow-lg">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <FiMapPin className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Visit Us</h3>
-              <div className="space-y-2 text-gray-300">
-                <p className="text-pink-400 font-bold text-lg mb-2">Sanjay Telecom</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Visit Us</h3>
+              <div className="space-y-2 text-gray-600">
+                <p className="text-blue-600 font-bold text-lg mb-2">Sanjay Telecom</p>
                 <p>Ananda Gopal,</p>
                 <p>Bhiringi Girls school,</p>
                 <p>Benachity, Durgapur,</p>
-                <p className="text-pink-400 font-semibold mt-4">West Bengal 713213</p>
+                <p className="text-blue-600 font-semibold mt-4">West Bengal 713213</p>
               </div>
             </div>
 
             {/* Call Us */}
-            <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700 text-center hover:border-pink-500 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white rounded-2xl p-8 border border-gray-200 text-center hover:border-blue-500 transition-all duration-300 shadow-lg">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <FiPhone className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Call Us</h3>
-              <div className="space-y-2 text-gray-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Call Us</h3>
+              <div className="space-y-2 text-gray-600">
                 <p>We're only a call away whenever</p>
                 <p>you need us.</p>
                 <a 
                   href="tel:+917407926912" 
-                  className="block text-pink-400 font-bold text-xl mt-4 hover:text-pink-300 transition-colors"
+                  className="block text-blue-600 font-bold text-xl mt-4 hover:text-blue-700 transition-colors"
                 >
                   +91 7407926912
                 </a>
@@ -97,17 +97,17 @@ const ContactUs = () => {
             </div>
 
             {/* Contact Us */}
-            <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700 text-center hover:border-pink-500 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white rounded-2xl p-8 border border-gray-200 text-center hover:border-blue-500 transition-all duration-300 shadow-lg">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <FiMessageCircle className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Contact Us</h3>
-              <div className="space-y-2 text-gray-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h3>
+              <div className="space-y-2 text-gray-600">
                 <p>Reach out anytime, we're here to</p>
                 <p>help.</p>
                 <a 
                   href="mailto:support@mobilerpairdurgapur.in" 
-                  className="block text-pink-400 font-bold mt-4 hover:text-pink-300 transition-colors"
+                  className="block text-blue-600 font-bold mt-4 hover:text-blue-700 transition-colors"
                 >
                   support@mobilerpairdurgapur.in
                 </a>
@@ -118,18 +118,18 @@ const ContactUs = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 px-4 bg-gray-900">
+      <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Find Our Location</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Visit <span className="text-pink-400 font-semibold">Sanjay Telecom</span> for immediate assistance and device repairs
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Our Location</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Visit <span className="text-blue-600 font-semibold">Sanjay Telecom</span> for immediate assistance and device repairs
             </p>
           </div>
 
           {/* Interactive Map */}
-          <div className="bg-gray-800 rounded-2xl p-4 border border-gray-700">
-            <div className="aspect-video bg-gray-700 rounded-lg overflow-hidden">
+          <div className="bg-white rounded-2xl p-4 border border-gray-200 shadow-lg">
+            <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14607.626!2d87.3119!3d23.5204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMxJzEzLjYiTiA4N8KwMTgnNDIuOCJF!5e0!3m2!1sen!2sin!4v1640995200000!5m2!1sen!2sin"
                 width="100%"
@@ -149,36 +149,36 @@ const ContactUs = () => {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Send Us a Message</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Send Us a Message</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
               Have a question or need support? Fill out the form below and we'll get back to you as soon as possible.
             </p>
           </div>
 
-          <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+          <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-white font-medium mb-2">Full Name *</label>
+                  <label className="block text-gray-900 font-medium mb-2">Full Name *</label>
                   <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
                     placeholder="Enter your full name"
                   />
                 </div>
                 <div>
-                  <label className="block text-white font-medium mb-2">Email Address *</label>
+                  <label className="block text-gray-900 font-medium mb-2">Email Address *</label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
                     placeholder="Enter your email address"
                   />
                 </div>
@@ -186,24 +186,24 @@ const ContactUs = () => {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-white font-medium mb-2">Phone Number</label>
+                  <label className="block text-gray-900 font-medium mb-2">Phone Number</label>
                   <input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
                     placeholder="Enter your phone number"
                   />
                 </div>
                 <div>
-                  <label className="block text-white font-medium mb-2">Subject *</label>
+                  <label className="block text-gray-900 font-medium mb-2">Subject *</label>
                   <select
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
                   >
                     <option value="">Select a subject</option>
                     <option value="repair-inquiry">Repair Inquiry</option>
@@ -217,21 +217,21 @@ const ContactUs = () => {
               </div>
 
               <div>
-                <label className="block text-white font-medium mb-2">Message *</label>
+                <label className="block text-gray-900 font-medium mb-2">Message *</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 resize-none"
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 resize-none"
                   placeholder="Enter your message here..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 transform hover:scale-105"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <FiSend className="w-5 h-5" />
                 <span>Send Message</span>
@@ -242,27 +242,27 @@ const ContactUs = () => {
       </section>
 
       {/* Business Hours & Social Media */}
-      <section className="py-16 px-4 bg-gray-900">
+      <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
             
             {/* Business Hours */}
-            <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+            <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
               <div className="flex items-center mb-6">
-                <FiClock className="w-6 h-6 text-pink-500 mr-3" />
-                <h3 className="text-2xl font-bold text-white">Business Hours</h3>
+                <FiClock className="w-6 h-6 text-blue-600 mr-3" />
+                <h3 className="text-2xl font-bold text-gray-900">Business Hours</h3>
               </div>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Monday - Saturday</span>
-                  <span className="text-white font-medium">10:30 AM - 09:30 PM</span>
+                  <span className="text-gray-600">Monday - Saturday</span>
+                  <span className="text-gray-900 font-medium">10:30 AM - 09:30 PM</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Sunday</span>
-                  <span className="text-red-400 font-medium">Closed</span>
+                  <span className="text-gray-600">Sunday</span>
+                  <span className="text-red-500 font-medium">Closed</span>
                 </div>
-                <div className="border-t border-gray-600 pt-4 mt-6">
-                  <p className="text-gray-400 text-sm">
+                <div className="border-t border-gray-200 pt-4 mt-6">
+                  <p className="text-gray-500 text-sm">
                     * Emergency repairs may be available outside business hours. Please call for availability.
                   </p>
                 </div>
@@ -270,12 +270,12 @@ const ContactUs = () => {
             </div>
 
             {/* Social Media & Quick Contact */}
-            <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
-              <h3 className="text-2xl font-bold text-white mb-6">Connect With Us</h3>
+            <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Connect With Us</h3>
               
               {/* Social Media Links */}
               <div className="mb-8">
-                <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Follow Us</h4>
                 <div className="flex space-x-4">
                   <a href="https://wa.me/917407926912" className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors">
                     <FaWhatsapp className="w-6 h-6 text-white" />
@@ -294,17 +294,17 @@ const ContactUs = () => {
 
               {/* Quick Contact */}
               <div>
-                <h4 className="text-lg font-semibold text-white mb-4">Quick Contact</h4>
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Quick Contact</h4>
                 <div className="space-y-3">
-                  <a href="tel:+917407926912" className="flex items-center space-x-3 text-gray-300 hover:text-pink-400 transition-colors">
+                  <a href="tel:+917407926912" className="flex items-center space-x-3 text-gray-600 hover:text-blue-600 transition-colors">
                     <FiPhone className="w-5 h-5" />
                     <span>+91 7407926912</span>
                   </a>
-                  <a href="mailto:support@mobilerpairdurgapur.in" className="flex items-center space-x-3 text-gray-300 hover:text-pink-400 transition-colors">
+                  <a href="mailto:support@mobilerpairdurgapur.in" className="flex items-center space-x-3 text-gray-600 hover:text-blue-600 transition-colors">
                     <FiMail className="w-5 h-5" />
                     <span>support@mobilerpairdurgapur.in</span>
                   </a>
-                  <a href="https://wa.me/917407926912" className="flex items-center space-x-3 text-gray-300 hover:text-green-400 transition-colors">
+                  <a href="https://wa.me/917407926912" className="flex items-center space-x-3 text-gray-600 hover:text-green-500 transition-colors">
                     <FaWhatsapp className="w-5 h-5" />
                     <span>WhatsApp Support</span>
                   </a>

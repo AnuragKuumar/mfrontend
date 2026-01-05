@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FiShoppingCart, FiStar, FiFilter, FiSearch, FiHeart } from 'react-icons/fi';
+import { FiShoppingCart, FiStar, FiSearch, FiHeart } from 'react-icons/fi';
 import { useCart } from '../context/CartContext';
 
 const Products = () => {
@@ -214,50 +214,21 @@ const Products = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white animated-background">
-      {/* Enhanced Animated Background */}
-      <div className="gradient-mesh"></div>
-      <div className="glow-orb glow-orb-1 parallax-slow"></div>
-      <div className="glow-orb glow-orb-2 parallax-fast"></div>
-      <div className="glow-orb glow-orb-3"></div>
-      
-      {/* Floating Elements */}
-      <div className="floating-elements">
-        <div className="floating-element"></div>
-        <div className="floating-element"></div>
-        <div className="floating-element"></div>
-        <div className="floating-element"></div>
-      </div>
-      
-      {/* Particle System */}
-      <div className="particles">
-        {[...Array(15)].map((_, i) => (
-          <div 
-            key={i} 
-            className="particle" 
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 15}s`,
-              animationDuration: `${15 + Math.random() * 10}s`
-            }}
-          ></div>
-        ))}
-      </div>
-      
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative z-10 py-20 px-4 bg-gradient-to-br from-gray-900/80 via-gray-800/80 to-black/80 backdrop-blur-sm">
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-reveal">
-            Our <span className="bg-gradient-to-r from-pink-400 to-purple-600 bg-clip-text text-transparent">Products</span>
+          <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+            Our <span className="text-blue-600">Products</span>
           </h1>
-          <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto text-reveal-delay-1">
+          <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
             Discover the latest mobile phones and premium accessories from top brands
           </p>
         </div>
       </section>
 
       {/* Filters Section */}
-      <section className="relative z-10 py-8 px-4 bg-gray-900/80 backdrop-blur-lg border-b border-gray-700">
+      <section className="py-8 px-4 bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             
@@ -269,7 +240,7 @@ const Products = () => {
                 placeholder="Search products..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-gray-800/80 backdrop-blur-sm border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300 enhanced-glow"
+                className="w-full pl-10 pr-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 transition-all duration-300"
               />
             </div>
 
@@ -281,8 +252,8 @@ const Products = () => {
                   onClick={() => setActiveCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                     activeCategory === category.id
-                      ? 'bg-pink-500 text-white'
-                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
                   }`}
                 >
                   {category.name} ({category.count})
@@ -294,7 +265,7 @@ const Products = () => {
             <select
               value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
-              className="px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-pink-500"
+              className="px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:border-blue-600"
             >
               <option value="all">All Prices</option>
               <option value="under-5000">Under ₹5,000</option>
@@ -310,16 +281,16 @@ const Products = () => {
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold text-white">
+            <h2 className="text-2xl font-bold text-gray-900">
               {activeCategory === 'all' ? 'All Products' : 
                activeCategory === 'mobiles' ? 'Mobile Phones' : 'Accessories'} 
-              <span className="text-gray-400 ml-2">({filteredProducts.length} items)</span>
+              <span className="text-gray-600 ml-2">({filteredProducts.length} items)</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredProducts.map(product => (
-              <div key={product.id} className="bg-gray-800/80 backdrop-blur-lg rounded-2xl p-6 border border-gray-700 hover:border-pink-500 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10 group">
+              <div key={product.id} className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-blue-500 transition-all duration-300 hover:shadow-lg group">
                 
                 {/* Product Image */}
                 <div className="text-center mb-4 relative">
@@ -327,11 +298,11 @@ const Products = () => {
                     {product.image}
                   </div>
                   {product.originalPrice > product.price && (
-                    <span className="inline-block bg-gradient-to-r from-red-500 to-red-600 text-white text-xs px-3 py-1 rounded-full font-bold shadow-lg animate-pulse">
+                    <span className="inline-block bg-red-500 text-white text-xs px-3 py-1 rounded-full font-bold">
                       Save ₹{(product.originalPrice - product.price).toLocaleString()}
                     </span>
                   )}
-                  <button className="absolute top-2 right-2 p-2 bg-gray-900/80 backdrop-blur-sm rounded-full text-pink-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform hover:scale-110 hover:bg-pink-500 hover:text-white">
+                  <button className="absolute top-2 right-2 p-2 bg-gray-100 rounded-full text-gray-600 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-blue-500 hover:text-white">
                     <FiHeart className="w-4 h-4" />
                   </button>
                 </div>
@@ -339,26 +310,26 @@ const Products = () => {
                 {/* Product Info */}
                 <div className="space-y-3">
                   <div>
-                    <h3 className="text-lg font-semibold text-white group-hover:text-pink-400 transition-colors line-clamp-2">
+                    <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2">
                       {product.name}
                     </h3>
-                    <p className="text-gray-400 text-sm font-medium">{product.brand}</p>
+                    <p className="text-gray-600 text-sm font-medium">{product.brand}</p>
                   </div>
 
                   {/* Rating */}
                   <div className="flex items-center space-x-2">
                     <div className="flex items-center">
                       <FiStar className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-white text-sm ml-1 font-medium">{product.rating}</span>
+                      <span className="text-gray-900 text-sm ml-1 font-medium">{product.rating}</span>
                     </div>
-                    <span className="text-gray-400 text-sm">({product.reviews} reviews)</span>
+                    <span className="text-gray-600 text-sm">({product.reviews} reviews)</span>
                   </div>
 
                   {/* Features */}
                   <div className="space-y-1">
                     {product.features.slice(0, 2).map((feature, index) => (
-                      <div key={index} className="text-gray-300 text-xs flex items-center">
-                        <span className="w-1 h-1 bg-pink-400 rounded-full mr-2"></span>
+                      <div key={index} className="text-gray-700 text-xs flex items-center">
+                        <span className="w-1 h-1 bg-blue-500 rounded-full mr-2"></span>
                         {feature}
                       </div>
                     ))}
@@ -366,12 +337,12 @@ const Products = () => {
 
                   {/* Colors */}
                   <div className="flex items-center space-x-2">
-                    <span className="text-gray-400 text-xs">Colors:</span>
+                    <span className="text-gray-600 text-xs">Colors:</span>
                     <div className="flex space-x-1">
                       {product.colors.slice(0, 3).map((color, index) => (
                         <div
                           key={index}
-                          className="w-4 h-4 rounded-full border border-gray-600 hover:scale-110 transition-transform duration-200"
+                          className="w-4 h-4 rounded-full border border-gray-300 hover:scale-110 transition-transform duration-200"
                           style={{
                             backgroundColor: color.toLowerCase().includes('black') ? '#000' :
                                            color.toLowerCase().includes('white') ? '#fff' :
@@ -385,18 +356,18 @@ const Products = () => {
                         ></div>
                       ))}
                       {product.colors.length > 3 && (
-                        <span className="text-gray-400 text-xs">+{product.colors.length - 3}</span>
+                        <span className="text-gray-600 text-xs">+{product.colors.length - 3}</span>
                       )}
                     </div>
                   </div>
 
                   {/* Price */}
                   <div className="flex items-center space-x-2">
-                    <span className="text-2xl font-bold text-white">
+                    <span className="text-2xl font-bold text-gray-900">
                       ₹{product.price.toLocaleString()}
                     </span>
                     {product.originalPrice > product.price && (
-                      <span className="text-gray-400 line-through text-sm">
+                      <span className="text-gray-500 line-through text-sm">
                         ₹{product.originalPrice.toLocaleString()}
                       </span>
                     )}
@@ -405,7 +376,7 @@ const Products = () => {
                   {/* Stock Status */}
                   <div className="flex items-center justify-between">
                     <span className={`text-sm font-medium ${
-                      product.inStock ? 'text-green-400' : 'text-red-400'
+                      product.inStock ? 'text-green-600' : 'text-red-500'
                     }`}>
                       {product.inStock ? 'In Stock' : 'Out of Stock'}
                     </span>
@@ -416,12 +387,12 @@ const Products = () => {
                     <button
                       onClick={() => handleAddToCart(product)}
                       disabled={!product.inStock}
-                      className="flex-1 bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105"
+                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <FiShoppingCart className="w-4 h-4" />
                       <span>Add to Cart</span>
                     </button>
-                    <button className="p-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-all duration-300 hover:scale-105">
+                    <button className="p-3 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-lg transition-all duration-300">
                       <FiHeart className="w-4 h-4" />
                     </button>
                   </div>
@@ -433,19 +404,19 @@ const Products = () => {
           {filteredProducts.length === 0 && (
             <div className="text-center py-12">
               <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-white mb-2">No products found</h3>
-              <p className="text-gray-400">Try adjusting your search or filter criteria</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">No products found</h3>
+              <p className="text-gray-600">Try adjusting your search or filter criteria</p>
             </div>
           )}
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 bg-gray-900">
+      <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Why Shop With Us?</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Shop With Us?</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
               Experience the best in mobile technology with our premium products and services
             </p>
           </div>
@@ -475,8 +446,8 @@ const Products = () => {
             ].map((feature, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300 text-sm">{feature.description}</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600 text-sm">{feature.description}</p>
               </div>
             ))}
           </div>

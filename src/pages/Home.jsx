@@ -30,7 +30,7 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             
             {/* Left Side - Your SVG File */}
-            <div className="relative overflow-hidden rounded-lg bg-blue-600 min-h-[300px] lg:min-h-[400px] flex items-center justify-center shadow-md order-2 lg:order-1">
+            <div className="relative overflow-hidden rounded-lg bg-gray-100 min-h-[300px] lg:min-h-[400px] flex items-center justify-center shadow-md order-2 lg:order-1">
               <img 
                 src="/images/repair.svg" 
                 alt="Professional iPhone Repair Service" 
@@ -42,10 +42,10 @@ const Home = () => {
                 }}
               />
               {/* Fallback if SVG doesn't load */}
-              <div className="absolute inset-0 bg-blue-600 rounded-lg flex items-center justify-center" style={{ display: 'none' }}>
-                <div className="text-center text-white p-4 lg:p-8">
-                  <MdPhoneIphone className="w-16 h-16 lg:w-24 lg:h-24 mx-auto mb-4 text-white" />
-                  <h3 className="text-xl lg:text-2xl font-bold mb-2">Professional iPhone Repair</h3>
+              <div className="absolute inset-0 bg-gray-100 rounded-lg flex items-center justify-center" style={{ display: 'none' }}>
+                <div className="text-center text-gray-700 p-4 lg:p-8">
+                  <MdPhoneIphone className="w-16 h-16 lg:w-24 lg:h-24 mx-auto mb-4 text-gray-600" />
+                  <h3 className="text-xl lg:text-2xl font-bold mb-2">Professional Phone Repair</h3>
                   <p className="text-base lg:text-lg opacity-90">Expert service with genuine parts</p>
                 </div>
               </div>
@@ -107,19 +107,37 @@ const Home = () => {
                       <FiStar className="text-yellow-500 w-3 h-3 lg:w-4 lg:h-4 mr-1" />
                       <span className="font-bold text-gray-900 text-xs lg:text-sm">4.7/5</span>
                     </div>
-                    <p className="text-xs text-gray-600 leading-tight">Based on 7000+ Reviews</p>
+                    <p className="text-xs text-gray-600 leading-tight">Based on 700+ Reviews</p>
                   </div>
                   <div className="text-center">
-                    <div className="font-bold text-blue-600 mb-1 text-xs lg:text-sm">1,25,000+</div>
+                    <div className="font-bold text-blue-600 mb-1 text-xs lg:text-sm">5000+</div>
                     <p className="text-xs text-gray-600 leading-tight">Trusted by Customers</p>
                   </div>
                   <div className="text-center">
                     <div className="font-bold text-green-600 mb-1 text-xs lg:text-sm">7000+</div>
-                    <p className="text-xs text-gray-600 leading-tight">Devices Pickup Completed</p>
+                    <p className="text-xs text-gray-600 leading-tight">Devices Completed</p>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Discount Banner */}
+      <section className="py-4 px-4 bg-gradient-to-r from-green-500 to-green-600">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="flex items-center justify-center space-x-2">
+              <span className="text-2xl">🎉</span>
+              <h3 className="text-white font-bold text-lg lg:text-xl">
+                ₹100 Flat Discount on All Purchases
+              </h3>
+              <span className="text-2xl">🎉</span>
+            </div>
+            <p className="text-green-100 text-sm mt-1">
+              Limited time offer - Valid on all repair services and accessories
+            </p>
           </div>
         </div>
       </section>
@@ -154,13 +172,13 @@ const Home = () => {
                   <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white text-sm">2</span>
                   </div>
-                  <span className="text-gray-700 text-sm lg:text-base">Free Pickup & Delivery</span>
+                  <span className="text-gray-700 text-sm lg:text-base">Free Pickup & Delivery Soon</span>
                 </div>
                 <div className="flex items-center space-x-3 p-3 rounded-lg bg-white border border-gray-200 shadow-sm">
                   <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white text-sm">3</span>
                   </div>
-                  <span className="text-gray-700 text-sm lg:text-base">1,25,000+ Happy Customers</span>
+                  <span className="text-gray-700 text-sm lg:text-base">25,000+ Happy Customers</span>
                 </div>
                 <div className="flex items-center space-x-3 p-3 rounded-lg bg-white border border-gray-200 shadow-sm">
                   <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
@@ -195,13 +213,13 @@ const Home = () => {
               { 
                 name: 'Display Replacement', 
                 icon: <MdPhoneIphone className="w-8 h-8 lg:w-10 lg:h-10 text-blue-600" />,
-                brand: 'iPhone',
-                desc: 'Cracked or damaged screen repair' 
+                desc: 'Cracked or damaged screen repair',
+                warranty: '7 days replacement warranty - T&C apply'
               },
               { 
                 name: 'Battery Replacement', 
                 icon: <MdBatteryChargingFull className="w-8 h-8 lg:w-10 lg:h-10 text-green-600" />,
-                brand: 'Samsung',
+               
                 desc: 'Poor battery life or charging issues' 
               },
               { 
@@ -213,13 +231,13 @@ const Home = () => {
               { 
                 name: 'Speaker/Mic Repair', 
                 icon: <MdVolumeUp className="w-8 h-8 lg:w-10 lg:h-10 text-purple-600" />,
-                brand: 'iPhone',
+               
                 desc: 'Audio issues and microphone problems' 
               },
               { 
                 name: 'Water Damage Repair', 
                 icon: <MdWaterDrop className="w-8 h-8 lg:w-10 lg:h-10 text-cyan-600" />,
-                brand: 'Samsung',
+           
                 desc: 'Device got wet or water damaged' 
               },
               { 
@@ -241,8 +259,15 @@ const Home = () => {
                     {service.icon}
                   </div>
                   <h3 className="text-base lg:text-lg font-semibold text-gray-900 mb-2">{service.name}</h3>
-                  <p className={`text-xs lg:text-sm font-medium mb-2 ${service.comingSoon ? 'text-blue-600' : 'text-blue-600'}`}>{service.brand}</p>
-                  <p className="text-gray-600 text-xs lg:text-sm mb-3 lg:mb-4">{service.desc}</p>
+                  {service.brand && (
+                    <p className={`text-xs lg:text-sm font-medium mb-2 ${service.comingSoon ? 'text-blue-600' : 'text-blue-600'}`}>{service.brand}</p>
+                  )}
+                  <p className="text-gray-600 text-xs lg:text-sm mb-2">{service.desc}</p>
+                  {service.warranty && (
+                    <p className="text-yellow-600 text-xs font-medium mb-3 lg:mb-4">
+                      🛡️ {service.warranty}
+                    </p>
+                  )}
                   {service.comingSoon ? (
                     <button
                       disabled
