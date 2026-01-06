@@ -39,22 +39,16 @@ const About = () => {
       description: '10+ years in mobile technology and repair industry'
     },
     {
-      name: 'Priya Sharma',
+      name: 'Ajay',
       role: 'Head of Operations',
-      image: '👩‍💼',
+      image: '👨‍💼',
       description: 'Expert in service operations and customer experience'
     },
     {
-      name: 'Amit Singh',
+      name: 'Baishakhi Singh',
       role: 'Lead Technician',
-      image: '👨‍🔧',
+      image: '👩‍🔧',
       description: 'Certified repair specialist with 8+ years experience'
-    },
-    {
-      name: 'Sneha Patel',
-      role: 'Customer Success Manager',
-      image: '👩‍💻',
-      description: 'Dedicated to ensuring customer satisfaction and support'
     }
   ];
 

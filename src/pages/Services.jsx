@@ -25,7 +25,6 @@ const Services = () => {
       features: [
         'Original quality displays',
         'Touch functionality testing',
-        '6 months warranty',
         'Same day service available'
       ],
       price: 'Starting from ₹799',
@@ -39,7 +38,6 @@ const Services = () => {
       features: [
         'High capacity batteries',
         'Battery health optimization',
-        '3 months warranty',
         'Quick 30-minute service'
       ],
       price: 'Starting from ₹399',
@@ -53,7 +51,6 @@ const Services = () => {
       features: [
         'Complete port replacement',
         'Charging speed optimization',
-        '2 months warranty',
         'Free charging cable'
       ],
       price: 'Starting from ₹199',
@@ -67,7 +64,6 @@ const Services = () => {
       features: [
         'Audio quality testing',
         'Microphone calibration',
-        '2 months warranty',
         'Call quality assurance'
       ],
       price: 'Starting from ₹199',
@@ -95,8 +91,7 @@ const Services = () => {
       features: [
         'Camera module replacement',
         'Focus calibration',
-        'Image quality testing',
-        '2 months warranty'
+        'Image quality testing'
       ],
       price: 'Starting from ₹499',
       popular: false
