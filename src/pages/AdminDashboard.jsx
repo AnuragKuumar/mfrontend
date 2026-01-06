@@ -316,14 +316,14 @@ const AdminDashboard = () => {
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 {bookings.map((booking) => (
-                  <tr key={booking._id} className="hover:bg-gray-50">
+                  <tr key={booking.id} className="hover:bg-gray-50">
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div>
                         <div className="text-sm font-medium text-gray-900">
-                          {booking.customerDetails?.name || booking.customerName}
+                          {booking.customerName || booking.customerDetails?.name || 'No name'}
                         </div>
                         <div className="text-sm text-gray-500">
-                          {booking.customerDetails?.phone || booking.phone}
+                          {booking.customerPhone || booking.customerDetails?.phone || 'No phone'}
                         </div>
                       </div>
                     </td>
@@ -348,7 +348,7 @@ const AdminDashboard = () => {
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       <div className="flex space-x-2">
                         <button
-                          onClick={() => handleCall(booking.customerDetails?.phone || booking.phone)}
+                          onClick={() => handleCall(booking.customerPhone || booking.customerDetails?.phone)}
                           className="text-blue-600 hover:text-blue-900 p-1 rounded"
                           title="Call Customer"
                         >
@@ -356,8 +356,8 @@ const AdminDashboard = () => {
                         </button>
                         <button
                           onClick={() => handleWhatsApp(
-                            booking.customerDetails?.phone || booking.phone, 
-                            booking.customerDetails?.name || booking.customerName, 
+                            booking.customerPhone || booking.customerDetails?.phone, 
+                            booking.customerName || booking.customerDetails?.name, 
                             `${booking.deviceBrand} ${booking.deviceModel}`
                           )}
                           className="text-green-600 hover:text-green-900 p-1 rounded"
@@ -367,8 +367,8 @@ const AdminDashboard = () => {
                         </button>
                         <button
                           onClick={() => handleSMS(
-                            booking.customerDetails?.phone || booking.phone, 
-                            booking.customerDetails?.name || booking.customerName
+                            booking.customerPhone || booking.customerDetails?.phone, 
+                            booking.customerName || booking.customerDetails?.name
                           )}
                           className="text-purple-600 hover:text-purple-900 p-1 rounded"
                           title="Send SMS"
@@ -397,14 +397,14 @@ const AdminDashboard = () => {
           <div className="lg:hidden">
             <div className="divide-y divide-gray-200">
               {bookings.map((booking) => (
-                <div key={booking._id} className="p-4 hover:bg-gray-50">
+                <div key={booking.id} className="p-4 hover:bg-gray-50">
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex-1">
                       <h3 className="text-sm font-medium text-gray-900">
-                        {booking.customerDetails?.name || booking.customerName}
+                        {booking.customerName || booking.customerDetails?.name || 'No name'}
                       </h3>
                       <p className="text-sm text-gray-500">
-                        {booking.customerDetails?.phone || booking.phone}
+                        {booking.customerPhone || booking.customerDetails?.phone || 'No phone'}
                       </p>
                       <p className="text-sm text-gray-600 mt-1">
                         {booking.deviceBrand} {booking.deviceModel}
@@ -428,7 +428,7 @@ const AdminDashboard = () => {
                   <div className="flex items-center justify-between">
                     <div className="flex space-x-3">
                       <button
-                        onClick={() => handleCall(booking.customerDetails?.phone || booking.phone)}
+                        onClick={() => handleCall(booking.customerPhone || booking.customerDetails?.phone)}
                         className="flex items-center justify-center w-8 h-8 text-blue-600 hover:text-blue-900 hover:bg-blue-50 rounded-full transition-colors"
                         title="Call Customer"
                       >
@@ -436,8 +436,8 @@ const AdminDashboard = () => {
                       </button>
                       <button
                         onClick={() => handleWhatsApp(
-                          booking.customerDetails?.phone || booking.phone, 
-                          booking.customerDetails?.name || booking.customerName, 
+                          booking.customerPhone || booking.customerDetails?.phone, 
+                          booking.customerName || booking.customerDetails?.name, 
                           `${booking.deviceBrand} ${booking.deviceModel}`
                         )}
                         className="flex items-center justify-center w-8 h-8 text-green-600 hover:text-green-900 hover:bg-green-50 rounded-full transition-colors"
@@ -447,8 +447,8 @@ const AdminDashboard = () => {
                       </button>
                       <button
                         onClick={() => handleSMS(
-                          booking.customerDetails?.phone || booking.phone, 
-                          booking.customerDetails?.name || booking.customerName
+                          booking.customerPhone || booking.customerDetails?.phone, 
+                          booking.customerName || booking.customerDetails?.name
                         )}
                         className="flex items-center justify-center w-8 h-8 text-purple-600 hover:text-purple-900 hover:bg-purple-50 rounded-full transition-colors"
                         title="Send SMS"
@@ -499,11 +499,11 @@ const AdminDashboard = () => {
               <div className="space-y-4">
                 <div>
                   <label className="text-sm font-medium text-gray-700">Customer:</label>
-                  <p className="text-sm text-gray-900 mt-1">{selectedBooking.customerDetails?.name || selectedBooking.customerName}</p>
+                  <p className="text-sm text-gray-900 mt-1">{selectedBooking.customerName || selectedBooking.customerDetails?.name || 'No name'}</p>
                 </div>
                 <div>
                   <label className="text-sm font-medium text-gray-700">Phone:</label>
-                  <p className="text-sm text-gray-900 mt-1">{selectedBooking.customerDetails?.phone || selectedBooking.phone}</p>
+                  <p className="text-sm text-gray-900 mt-1">{selectedBooking.customerPhone || selectedBooking.customerDetails?.phone || 'No phone'}</p>
                 </div>
                 <div>
                   <label className="text-sm font-medium text-gray-700">Device:</label>
@@ -528,13 +528,13 @@ const AdminDashboard = () => {
                 <label className="text-sm font-medium text-gray-700 mb-3 block">Update Status:</label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <button
-                    onClick={() => updateBookingStatus(selectedBooking._id, 'in-progress')}
+                    onClick={() => updateBookingStatus(selectedBooking.id, 'in-progress')}
                     className="w-full px-4 py-3 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     In Progress
                   </button>
                   <button
-                    onClick={() => updateBookingStatus(selectedBooking._id, 'completed')}
+                    onClick={() => updateBookingStatus(selectedBooking.id, 'completed')}
                     className="w-full px-4 py-3 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors"
                   >
                     Complete
@@ -547,7 +547,7 @@ const AdminDashboard = () => {
                 <label className="text-sm font-medium text-gray-700 mb-3 block">Quick Actions:</label>
                 <div className="flex justify-center space-x-4">
                   <button
-                    onClick={() => handleCall(selectedBooking.customerDetails?.phone || selectedBooking.phone)}
+                    onClick={() => handleCall(selectedBooking.customerPhone || selectedBooking.customerDetails?.phone)}
                     className="flex items-center justify-center w-12 h-12 text-blue-600 hover:text-blue-900 hover:bg-blue-50 rounded-full transition-colors"
                     title="Call Customer"
                   >
@@ -555,8 +555,8 @@ const AdminDashboard = () => {
                   </button>
                   <button
                     onClick={() => handleWhatsApp(
-                      selectedBooking.customerDetails?.phone || selectedBooking.phone, 
-                      selectedBooking.customerDetails?.name || selectedBooking.customerName, 
+                      selectedBooking.customerPhone || selectedBooking.customerDetails?.phone, 
+                      selectedBooking.customerName || selectedBooking.customerDetails?.name, 
                       `${selectedBooking.deviceBrand} ${selectedBooking.deviceModel}`
                     )}
                     className="flex items-center justify-center w-12 h-12 text-green-600 hover:text-green-900 hover:bg-green-50 rounded-full transition-colors"
@@ -566,8 +566,8 @@ const AdminDashboard = () => {
                   </button>
                   <button
                     onClick={() => handleSMS(
-                      selectedBooking.customerDetails?.phone || selectedBooking.phone, 
-                      selectedBooking.customerDetails?.name || selectedBooking.customerName
+                      selectedBooking.customerPhone || selectedBooking.customerDetails?.phone, 
+                      selectedBooking.customerName || selectedBooking.customerDetails?.name
                     )}
                     className="flex items-center justify-center w-12 h-12 text-purple-600 hover:text-purple-900 hover:bg-purple-50 rounded-full transition-colors"
                     title="Send SMS"
