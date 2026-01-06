@@ -39,7 +39,7 @@ const ContactUs = () => {
       city: 'Durgapur, West Bengal',
       phone: '+91 7407926912 / 9800999600',
       email: 'support@mobilerpairdurgapur.in',
-      hours: 'Mon-Sat: 10:30 AM - 09:30 PM',
+      hours: 'Mon-Sun: 10:30 AM - 09:30 PM',
       mapUrl: 'https://maps.google.com/embed?pb=!1m18!1m12!1m3!1d3888.0!2d77.2090!3d28.5355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMyJzA3LjgiTiA3N8KwMTInMzIuNCJF!5e0!3m2!1sen!2sin!4v1234567890'
     }
   ];
@@ -254,12 +254,8 @@ const ContactUs = () => {
               </div>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Monday - Saturday</span>
+                  <span className="text-gray-600">Monday - Sunday</span>
                   <span className="text-gray-900 font-medium">10:30 AM - 09:30 PM</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-600">Sunday</span>
-                  <span className="text-red-500 font-medium">Closed</span>
                 </div>
                 <div className="border-t border-gray-200 pt-4 mt-6">
                   <p className="text-gray-500 text-sm">

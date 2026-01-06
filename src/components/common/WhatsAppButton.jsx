@@ -20,7 +20,7 @@ const WhatsAppButton = () => {
     },
     {
       title: 'Store Location',
-      message: 'Hello! Can you share your store location and working hours?'
+      message: 'Hello! Can you share your store location and working hours? (Mon-Sun: 10:30 AM - 09:30 PM)'
     }
   ];
 
