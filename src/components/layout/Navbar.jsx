@@ -44,7 +44,7 @@ const Navbar = () => {
             <div className="hidden md:flex items-center space-x-6 text-gray-300">
               <div className="flex items-center space-x-2">
                 <FiPhone className="w-4 h-4" />
-                <span>+91 7407926912</span>
+                <span>+91 7407926912 / 9800999600</span>
               </div>
               <div className="flex items-center space-x-2">
                 <FiMail className="w-4 h-4" />
@@ -56,7 +56,7 @@ const Navbar = () => {
             {/* Mobile Contact - Show only phone on mobile */}
             <div className="flex md:hidden items-center space-x-2 text-gray-300">
               <FiPhone className="w-4 h-4" />
-              <span>+91 7407926912</span>
+              <span>+91 7407926912 / 9800999600</span>
             </div>
 
             {/* Social Links */}
@@ -86,10 +86,10 @@ const Navbar = () => {
             <Link to="/" className="flex items-center space-x-3">
               <img 
                 src="/images/mkitone-logo.svg" 
-                alt="Mobi repair Logo" 
+                alt="Mobile repair Logo" 
                 className="w-10 h-10"
               />
-              <span className="text-2xl font-bold text-white">Mobi repair</span>
+              <span className="text-2xl font-bold text-white">Mobile repair</span>
             </Link>
 
             {/* Desktop Navigation */}

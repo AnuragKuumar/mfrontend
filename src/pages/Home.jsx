@@ -32,9 +32,9 @@ const Home = () => {
             {/* Left Side - Your SVG File */}
             <div className="relative overflow-hidden rounded-lg bg-gray-100 min-h-[300px] lg:min-h-[400px] flex items-center justify-center shadow-md order-2 lg:order-1">
               <img 
-                src="/images/repair.svg" 
-                alt="Professional iPhone Repair Service" 
-                className="w-full h-full object-contain rounded-lg"
+                src="/images/mobile-repair-workspace.jpg" 
+                alt="Professional Mobile Repair Service" 
+                className="w-full h-full object-cover rounded-lg"
                 style={{ minHeight: '300px' }}
                 onError={(e) => {
                   e.target.style.display = 'none';
@@ -152,7 +152,7 @@ const Home = () => {
               <div className="flex items-center justify-center mb-4 lg:mb-6">
                 <img 
                   src="/images/mkitone-logo.svg" 
-                  alt="Mobi repair Logo" 
+                  alt="Mobile repair Logo" 
                   className="w-12 h-12 lg:w-16 lg:h-16"
                 />
               </div>
@@ -213,13 +213,13 @@ const Home = () => {
               { 
                 name: 'Display Replacement', 
                 icon: <MdPhoneIphone className="w-8 h-8 lg:w-10 lg:h-10 text-blue-600" />,
-                desc: 'Cracked or damaged screen repair',
-                warranty: '7 days replacement warranty - T&C apply'
+                brand: 'All Brands',
+                desc: 'Cracked or damaged screen repair'
               },
               { 
                 name: 'Battery Replacement', 
                 icon: <MdBatteryChargingFull className="w-8 h-8 lg:w-10 lg:h-10 text-green-600" />,
-               
+                brand: 'All Brands',
                 desc: 'Poor battery life or charging issues' 
               },
               { 
@@ -231,13 +231,13 @@ const Home = () => {
               { 
                 name: 'Speaker/Mic Repair', 
                 icon: <MdVolumeUp className="w-8 h-8 lg:w-10 lg:h-10 text-purple-600" />,
-               
+                brand: 'All Brands',
                 desc: 'Audio issues and microphone problems' 
               },
               { 
                 name: 'Water Damage Repair', 
                 icon: <MdWaterDrop className="w-8 h-8 lg:w-10 lg:h-10 text-cyan-600" />,
-           
+                brand: 'All Brands',
                 desc: 'Device got wet or water damaged' 
               },
               { 
@@ -263,11 +263,6 @@ const Home = () => {
                     <p className={`text-xs lg:text-sm font-medium mb-2 ${service.comingSoon ? 'text-blue-600' : 'text-blue-600'}`}>{service.brand}</p>
                   )}
                   <p className="text-gray-600 text-xs lg:text-sm mb-2">{service.desc}</p>
-                  {service.warranty && (
-                    <p className="text-yellow-600 text-xs font-medium mb-3 lg:mb-4">
-                      🛡️ {service.warranty}
-                    </p>
-                  )}
                   {service.comingSoon ? (
                     <button
                       disabled

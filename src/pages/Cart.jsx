@@ -103,25 +103,25 @@ const Cart = () => {
 
   if (items.length === 0) {
     return (
-      <div className="min-h-screen bg-black">
+      <div className="min-h-screen bg-white">
         {/* Animated Background */}
-        <div className="gradient-mesh"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50"></div>
         <div className="glow-orb glow-orb-1"></div>
         <div className="glow-orb glow-orb-2"></div>
         
         <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
           <div className="text-center max-w-md mx-auto">
-            <div className="bg-gray-800/80 backdrop-blur-lg rounded-3xl p-12 border border-gray-700 hover:border-pink-500 transition-all duration-500 transform hover:scale-105">
+            <div className="bg-white backdrop-blur-lg rounded-3xl p-12 border border-gray-200 hover:border-blue-500 transition-all duration-500 transform hover:scale-105 shadow-xl">
               <div className="text-8xl mb-6 animate-bounce">🛒</div>
-              <h2 className="text-3xl font-bold text-white mb-4 bg-gradient-to-r from-pink-400 to-purple-600 bg-clip-text text-transparent">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Your cart is empty
               </h2>
-              <p className="text-gray-300 mb-8 leading-relaxed">
+              <p className="text-gray-600 mb-8 leading-relaxed">
                 Looks like you haven't added any items to your cart yet. Start shopping to fill it up!
               </p>
               <Link 
                 to="/products" 
-                className="inline-flex items-center space-x-2 bg-pink-500 hover:bg-pink-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25"
+                className="inline-flex items-center space-x-2 bg-blue-500 hover:bg-blue-600 text-gray-900 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
               >
                 <FiShoppingBag className="w-5 h-5" />
                 <span>Start Shopping</span>
@@ -134,28 +134,28 @@ const Cart = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-white">
       {/* Animated Background */}
-      <div className="gradient-mesh"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50"></div>
       <div className="glow-orb glow-orb-1"></div>
       <div className="glow-orb glow-orb-2"></div>
       <div className="glow-orb glow-orb-3"></div>
       
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-black relative z-10">
+      <section className="py-20 px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between mb-8">
             <div className="text-center lg:text-left mb-6 lg:mb-0">
               <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-                Shopping <span className="bg-gradient-to-r from-pink-400 to-purple-600 bg-clip-text text-transparent">Cart</span>
+                Shopping <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Cart</span>
               </h1>
-              <p className="text-gray-300 text-lg">
+              <p className="text-gray-600 text-lg">
                 {items.length} {items.length === 1 ? 'item' : 'items'} in your cart
               </p>
             </div>
             <Link
               to="/products"
-              className="inline-flex items-center space-x-2 bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 border border-gray-600 transform hover:scale-105"
+              className="inline-flex items-center space-x-2 bg-white hover:bg-gray-50 text-gray-900 font-medium py-3 px-6 rounded-lg transition-all duration-300 border border-gray-300 transform hover:scale-105 shadow-sm"
             >
               <FiArrowLeft className="w-4 h-4" />
               <span>Continue Shopping</span>
@@ -184,14 +184,14 @@ const Cart = () => {
               return (
                 <div 
                   key={productId} 
-                  className="bg-gray-800/80 backdrop-blur-lg rounded-2xl p-6 border border-gray-700 hover:border-pink-500 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10"
+                  className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-blue-500 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
                     
                     {/* Product Image */}
                     <div className="flex-shrink-0">
-                      <div className="w-28 h-28 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden border border-gray-600 hover:border-pink-500 transition-all duration-300 transform hover:scale-105">
+                      <div className="w-28 h-28 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden border border-gray-300 hover:border-blue-500 transition-all duration-300 transform hover:scale-105">
                         <img
                           src={product.images?.[0] || product.image || 'https://via.placeholder.com/112x112?text=Product'}
                           alt={productName}
@@ -210,7 +210,7 @@ const Cart = () => {
 
                     {/* Product Details */}
                     <div className="flex-1 text-center md:text-left">
-                      <h3 className="text-xl font-bold text-white mb-2 hover:text-pink-400 transition-colors line-clamp-2">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2 hover:text-blue-600 transition-colors line-clamp-2">
                         {productName}
                       </h3>
                       {productBrand && (
@@ -219,7 +219,7 @@ const Cart = () => {
                         </p>
                       )}
                       <div className="flex items-center justify-center md:justify-start space-x-3">
-                        <span className="text-2xl font-bold bg-gradient-to-r from-pink-400 to-purple-600 bg-clip-text text-transparent">
+                        <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                           {formatCurrency(productPrice)}
                         </span>
                         {product.originalPrice && product.originalPrice > productPrice && (
@@ -238,21 +238,21 @@ const Cart = () => {
                     </div>
 
                     {/* Quantity Controls */}
-                    <div className="flex items-center space-x-3 bg-gray-700/50 backdrop-blur-sm rounded-xl p-3 border border-gray-600">
+                    <div className="flex items-center space-x-3 bg-white border border-gray-300/50 backdrop-blur-sm rounded-xl p-3 border border-gray-300">
                       <button
                         onClick={() => handleQuantityChange(productId, itemQuantity - 1)}
-                        className="w-10 h-10 bg-gradient-to-r from-gray-600 to-gray-700 hover:from-pink-500 hover:to-pink-600 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110 active:scale-95 shadow-lg"
+                        className="w-10 h-10 bg-gradient-to-r from-gray-600 to-gray-700 hover:from-blue-500 hover:to-blue-600 rounded-full flex items-center justify-center text-gray-900 transition-all duration-300 transform hover:scale-110 active:scale-95 shadow-lg"
                       >
                         <FiMinus className="w-4 h-4" />
                       </button>
-                      <div className="bg-gray-800 rounded-lg px-4 py-2 border border-gray-600">
-                        <span className="text-white font-bold text-lg w-8 text-center block">
+                      <div className="bg-white border border-gray-200 rounded-lg px-4 py-2 border border-gray-300">
+                        <span className="text-gray-900 font-bold text-lg w-8 text-center block">
                           {itemQuantity}
                         </span>
                       </div>
                       <button
                         onClick={() => handleQuantityChange(productId, itemQuantity + 1)}
-                        className="w-10 h-10 bg-gradient-to-r from-gray-600 to-gray-700 hover:from-pink-500 hover:to-pink-600 rounded-full flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110 active:scale-95 shadow-lg"
+                        className="w-10 h-10 bg-gradient-to-r from-gray-600 to-gray-700 hover:from-blue-500 hover:to-blue-600 rounded-full flex items-center justify-center text-gray-900 transition-all duration-300 transform hover:scale-110 active:scale-95 shadow-lg"
                       >
                         <FiPlus className="w-4 h-4" />
                       </button>
@@ -260,15 +260,15 @@ const Cart = () => {
 
                     {/* Item Total & Remove - Now Inside Card */}
                     <div className="flex flex-col items-center space-y-3">
-                      <div className="bg-gray-700/80 backdrop-blur-sm rounded-lg p-4 border border-gray-600/50 min-w-[120px]">
+                      <div className="bg-white border border-gray-300/80 backdrop-blur-sm rounded-lg p-4 border border-gray-300/50 min-w-[120px]">
                         <div className="text-xs text-gray-400 mb-1 text-center">Total</div>
-                        <div className="text-xl font-bold bg-gradient-to-r from-pink-400 to-purple-600 bg-clip-text text-transparent text-center">
+                        <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-center">
                           {formatCurrency(productPrice * itemQuantity)}
                         </div>
                       </div>
                       <button
                         onClick={() => removeFromCart(productId)}
-                        className="w-10 h-10 bg-red-500/20 hover:bg-red-500 text-red-400 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 border border-red-500/30 hover:border-red-500"
+                        className="w-10 h-10 bg-red-500/20 hover:bg-red-500 text-red-400 hover:text-gray-900 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 border border-red-500/30 hover:border-red-500"
                       >
                         <FiTrash2 className="w-4 h-4" />
                       </button>
@@ -293,24 +293,24 @@ const Cart = () => {
             <div className="space-y-6">
               
               {/* Summary Card */}
-              <div className="bg-gray-800/80 backdrop-blur-lg rounded-2xl p-8 border border-gray-700 hover:border-pink-500 transition-all duration-500 sticky top-4">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <FiShield className="w-6 h-6 mr-3 text-pink-500" />
+              <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-blue-500 transition-all duration-500 sticky top-4">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <FiShield className="w-6 h-6 mr-3 text-blue-500" />
                   Order Summary
                 </h3>
                 
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Subtotal</span>
-                    <span className="text-white font-semibold">{formatCurrency(total)}</span>
+                    <span className="text-gray-600">Subtotal</span>
+                    <span className="text-gray-900 font-semibold">{formatCurrency(total)}</span>
                   </div>
                   
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-300 flex items-center">
+                    <span className="text-gray-600 flex items-center">
                       <FiTruck className="w-4 h-4 mr-2" />
                       Shipping
                     </span>
-                    <span className="text-white font-semibold">
+                    <span className="text-gray-900 font-semibold">
                       {calculateShipping() === 0 ? (
                         <span className="text-green-400 font-bold">Free</span>
                       ) : (
@@ -320,14 +320,14 @@ const Cart = () => {
                   </div>
                   
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Tax (GST 18%)</span>
-                    <span className="text-white font-semibold">{formatCurrency(calculateTax())}</span>
+                    <span className="text-gray-600">Tax (GST 18%)</span>
+                    <span className="text-gray-900 font-semibold">{formatCurrency(calculateTax())}</span>
                   </div>
                   
-                  <div className="border-t border-gray-600 pt-4">
+                  <div className="border-t border-gray-300 pt-4">
                     <div className="flex justify-between items-center">
-                      <span className="text-xl font-bold text-white">Total</span>
-                      <span className="text-2xl font-bold bg-gradient-to-r from-pink-400 to-purple-600 bg-clip-text text-transparent">
+                      <span className="text-xl font-bold text-gray-900">Total</span>
+                      <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                         {formatCurrency(calculateFinalTotal())}
                       </span>
                     </div>
@@ -346,14 +346,14 @@ const Cart = () => {
                 {!showCheckout ? (
                   <button
                     onClick={() => setShowCheckout(true)}
-                    className="w-full mt-6 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25"
+                    className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-gray-900 font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
                   >
                     Proceed to Checkout
                   </button>
                 ) : (
                   <button
                     onClick={() => setShowCheckout(false)}
-                    className="w-full mt-6 bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300"
+                    className="w-full mt-6 bg-white border border-gray-300 hover:bg-gray-600 text-gray-900 font-medium py-3 px-6 rounded-xl transition-all duration-300"
                   >
                     Back to Summary
                   </button>
@@ -361,9 +361,9 @@ const Cart = () => {
               </div>
 
               {/* Payment Methods */}
-              <div className="bg-gray-800/80 backdrop-blur-lg rounded-2xl p-6 border border-gray-700">
-                <h3 className="text-lg font-bold text-white mb-4 flex items-center">
-                  <FiCreditCard className="w-5 h-5 mr-2 text-pink-500" />
+              <div className="bg-white rounded-2xl p-6 border border-gray-200">
+                <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                  <FiCreditCard className="w-5 h-5 mr-2 text-blue-500" />
                   Payment Options
                 </h3>
                 <div className="space-y-3">
@@ -373,19 +373,19 @@ const Cart = () => {
                       id="cod"
                       name="payment"
                       defaultChecked
-                      className="text-pink-500"
+                      className="text-blue-500"
                     />
                     <label htmlFor="cod" className="text-green-400 font-medium">
                       💰 Cash on Delivery (COD)
                     </label>
                   </div>
-                  <div className="flex items-center space-x-3 p-3 bg-gray-700/50 rounded-lg opacity-50">
+                  <div className="flex items-center space-x-3 p-3 bg-white border border-gray-300/50 rounded-lg opacity-50">
                     <input
                       type="radio"
                       id="online"
                       name="payment"
                       disabled
-                      className="text-pink-500"
+                      className="text-blue-500"
                     />
                     <label htmlFor="online" className="text-gray-400">
                       💳 Online Payment (Coming Soon)
@@ -397,8 +397,8 @@ const Cart = () => {
               {/* Security Badge */}
               <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-2xl p-6 text-center">
                 <FiShield className="w-8 h-8 text-green-400 mx-auto mb-3" />
-                <h4 className="text-white font-semibold mb-2">Secure Checkout</h4>
-                <p className="text-gray-300 text-sm">Your information is protected with 256-bit SSL encryption</p>
+                <h4 className="text-gray-900 font-semibold mb-2">Secure Checkout</h4>
+                <p className="text-gray-600 text-sm">Your information is protected with 256-bit SSL encryption</p>
               </div>
             </div>
           </div>
@@ -406,8 +406,8 @@ const Cart = () => {
           {/* Checkout Form */}
           {showCheckout && (
             <div className="mt-12">
-              <div className="bg-gray-800/80 backdrop-blur-lg rounded-2xl p-8 border border-gray-700 max-w-2xl mx-auto">
-                <h3 className="text-2xl font-bold text-white mb-6 text-center">
+              <div className="bg-white rounded-2xl p-8 border border-gray-200 max-w-2xl mx-auto">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
                   🚚 Shipping Address
                 </h3>
                 
@@ -419,7 +419,7 @@ const Cart = () => {
                       placeholder="Full Name *"
                       value={shippingAddress.name}
                       onChange={handleAddressChange}
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                       required
                     />
                     <input
@@ -428,7 +428,7 @@ const Cart = () => {
                       placeholder="Phone Number *"
                       value={shippingAddress.phone}
                       onChange={handleAddressChange}
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                       required
                     />
                   </div>
@@ -439,7 +439,7 @@ const Cart = () => {
                     placeholder="Email Address"
                     value={shippingAddress.email}
                     onChange={handleAddressChange}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                   />
                   
                   <input
@@ -448,7 +448,7 @@ const Cart = () => {
                     placeholder="Street Address *"
                     value={shippingAddress.street}
                     onChange={handleAddressChange}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white border border-gray-300 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                     required
                   />
                   
@@ -459,7 +459,7 @@ const Cart = () => {
                       placeholder="City *"
                       value={shippingAddress.city}
                       onChange={handleAddressChange}
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                       required
                     />
                     <input
@@ -468,7 +468,7 @@ const Cart = () => {
                       placeholder="State *"
                       value={shippingAddress.state}
                       onChange={handleAddressChange}
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                       required
                     />
                     <input
@@ -477,7 +477,7 @@ const Cart = () => {
                       placeholder="Pincode *"
                       value={shippingAddress.pincode}
                       onChange={handleAddressChange}
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                       required
                     />
                   </div>
@@ -487,7 +487,7 @@ const Cart = () => {
                   <button
                     onClick={handleCheckout}
                     disabled={loading}
-                    className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-gray-900 font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
                     {loading ? (
                       <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div>
@@ -499,7 +499,7 @@ const Cart = () => {
                   <div className="text-center">
                     <p className="text-gray-400 text-sm">
                       By placing your order, you agree to our{' '}
-                      <Link to="/terms" className="text-pink-400 hover:text-pink-300 underline">
+                      <Link to="/terms" className="text-blue-600 hover:text-blue-500 underline">
                         Terms & Conditions
                       </Link>
                     </p>

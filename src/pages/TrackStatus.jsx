@@ -73,13 +73,13 @@ const TrackStatus = () => {
         ],
         technician: {
           name: 'Rajesh Kumar',
-          phone: '+91 7407926912',
+          phone: '+91 7407926912 / 9800999600',
           experience: '5+ years'
         },
         serviceCenter: {
-          name: 'Mobi repair Service Center - Durgapur',
+          name: 'Mobile repair Service Center - Durgapur',
           address: 'Ananda Gopal, Bhiringi Girls school, Benachity, Durgapur, West Bengal 713213',
-          phone: '+91 7407926912'
+          phone: '+91 7407926912 / 9800999600'
         }
       };
 
@@ -338,7 +338,7 @@ const TrackStatus = () => {
                 className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-300"
               >
                 <FiPhone className="w-5 h-5 mr-2" />
-                Call Support: +91 7407926912
+                Call Support: +91 7407926912 / 9800999600
               </a>
               <a
                 href="mailto:support@mobilerpairdurgapur.in"

@@ -34,10 +34,10 @@ const ContactUs = () => {
 
   const locations = [
     {
-      name: 'Mobi repair Durgapur',
+      name: 'Mobile repair Durgapur',
       address: 'Ananda Gopal, Bhiringi Girls school, Benachity, Durgapur, West Bengal 713213',
       city: 'Durgapur, West Bengal',
-      phone: '+91 7407926912',
+      phone: '+91 7407926912 / 9800999600',
       email: 'support@mobilerpairdurgapur.in',
       hours: 'Mon-Sat: 10:30 AM - 09:30 PM',
       mapUrl: 'https://maps.google.com/embed?pb=!1m18!1m12!1m3!1d3888.0!2d77.2090!3d28.5355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMyJzA3LjgiTiA3N8KwMTInMzIuNCJF!5e0!3m2!1sen!2sin!4v1234567890'
@@ -91,7 +91,7 @@ const ContactUs = () => {
                   href="tel:+917407926912" 
                   className="block text-blue-600 font-bold text-xl mt-4 hover:text-blue-700 transition-colors"
                 >
-                  +91 7407926912
+                  +91 7407926912 / 9800999600
                 </a>
               </div>
             </div>
@@ -138,7 +138,7 @@ const ContactUs = () => {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Sanjay Telecom - Mobi repair Location"
+                title="Sanjay Telecom - Mobile repair Location"
               ></iframe>
             </div>
           </div>
@@ -298,7 +298,7 @@ const ContactUs = () => {
                 <div className="space-y-3">
                   <a href="tel:+917407926912" className="flex items-center space-x-3 text-gray-600 hover:text-blue-600 transition-colors">
                     <FiPhone className="w-5 h-5" />
-                    <span>+91 7407926912</span>
+                    <span>+91 7407926912 / 9800999600</span>
                   </a>
                   <a href="mailto:support@mobilerpairdurgapur.in" className="flex items-center space-x-3 text-gray-600 hover:text-blue-600 transition-colors">
                     <FiMail className="w-5 h-5" />

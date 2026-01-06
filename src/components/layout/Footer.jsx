@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="flex items-center">
               <img 
                 src="/images/mkitone-logo.svg" 
-                alt="Mobi repair Logo" 
+                alt="Mobile repair Logo" 
                 className="w-8 h-8"
               />
             </div>
@@ -98,7 +98,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <FiPhone className="w-4 h-4 text-primary-400" />
-                <span className="text-dark-300 text-sm">+91 7407926912</span>
+                <span className="text-dark-300 text-sm">+91 7407926912 / 9800999600</span>
               </div>
               <div className="flex items-center space-x-3">
                 <FiMail className="w-4 h-4 text-primary-400" />
@@ -124,7 +124,7 @@ const Footer = () => {
         <div className="border-t border-dark-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-dark-300 text-sm">
-              © {currentYear} Mobi repair. All rights reserved.
+              © {currentYear} Mobile repair. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <Link to="/privacy" className="text-dark-300 hover:text-white transition-colors">

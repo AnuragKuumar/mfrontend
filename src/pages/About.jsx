@@ -64,7 +64,7 @@ const About = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            About <span className="text-blue-600">Mobi repair</span>
+            About <span className="text-blue-600">Mobile repair</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             We are India's leading mobile repair service provider, committed to delivering 
@@ -98,14 +98,14 @@ const About = () => {
               <h2 className="text-3xl font-bold text-gray-900">Our Story</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Founded in 2019, Mobi repair started with a simple mission: to provide reliable, 
+                  Founded in 2019, Mobile repair started with a simple mission: to provide reliable, 
                   professional mobile repair services that customers can trust. What began as 
                   a small repair shop has grown into one of India's most trusted mobile repair 
                   service providers.
                 </p>
                 <p>
                   We recognized the frustration customers faced with unreliable repair services, 
-                  poor quality parts, and lack of warranty. That's why we built Mobi repair with a 
+                  poor quality parts, and lack of warranty. That's why we built Mobile repair with a 
                   focus on transparency, quality, and customer satisfaction.
                 </p>
                 <p>
@@ -119,7 +119,7 @@ const About = () => {
               <div className="w-80 h-80 bg-blue-600 rounded-lg flex items-center justify-center shadow-md">
                 <div className="text-center text-white">
                   <div className="text-6xl mb-4">🏢</div>
-                  <h3 className="text-xl font-bold mb-2">Mobi repair Headquarters</h3>
+                  <h3 className="text-xl font-bold mb-2">Mobile repair Headquarters</h3>
                   <p className="text-blue-100">Durgapur, India</p>
                 </div>
               </div>
@@ -132,7 +132,7 @@ const About = () => {
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Mobi repair?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Mobile repair?</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We're committed to providing the best mobile repair experience with 
               professional service and genuine parts.
@@ -210,7 +210,7 @@ const About = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              These core values guide everything we do at Mobi repair.
+              These core values guide everything we do at Mobile repair.
             </p>
           </div>
 
@@ -250,10 +250,10 @@ const About = () => {
       <section className="py-16 px-4 bg-blue-600">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Experience the Mobi repair Difference?
+            Ready to Experience the Mobile repair Difference?
           </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of satisfied customers who trust Mobi repair for their mobile repair needs.
+            Join thousands of satisfied customers who trust Mobile repair for their mobile repair needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

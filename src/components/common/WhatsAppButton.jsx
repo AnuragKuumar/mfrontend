@@ -43,7 +43,7 @@ const WhatsAppButton = () => {
                 <FaWhatsapp className="text-green-500 text-xl" />
               </div>
               <div>
-                <h3 className="font-semibold">Mobi repair Support</h3>
+                <h3 className="font-semibold">Mobile repair Support</h3>
                 <p className="text-sm opacity-90">Typically replies instantly</p>
               </div>
             </div>

@@ -115,7 +115,8 @@ const Services = () => {
         'Extra convenience charge: ₹99'
       ],
       recommended: true,
-      available: true
+      available: false,
+      comingSoon: true
     },
     {
       title: 'In-Door Service',
@@ -499,7 +500,7 @@ const Services = () => {
                 <div className="flex items-start space-x-3">
                   <FiShield className="w-6 h-6 text-green-600 mt-1" />
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">6 Months Warranty</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">1 Months Warranty</h3>
                     <p className="text-gray-600 text-sm">
                       Extended warranty on iPhone display replacements with premium quality parts
                     </p>
@@ -558,7 +559,7 @@ const Services = () => {
               href="tel:+917407926912"
               className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
-              Call Now: +91 7407926912
+              Call Now: +91 7407926912 / 9800999600
             </a>
           </div>
         </div>

@@ -142,7 +142,7 @@ const AdminDashboard = () => {
   };
 
   const handleSMS = async (phone, customerName) => {
-    const message = prompt(`Send SMS to ${customerName}:`, 'Your device repair update from Mobi Repair...');
+    const message = prompt(`Send SMS to ${customerName}:`, 'Your device repair update from Mobile Repair...');
     if (message) {
       try {
         const token = localStorage.getItem('adminToken');

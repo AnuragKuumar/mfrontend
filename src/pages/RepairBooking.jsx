@@ -204,19 +204,9 @@ const RepairBooking = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
+    <div className="min-h-screen bg-white text-gray-900 relative overflow-hidden">
       {/* Animated Background */}
-      <div className="gradient-mesh"></div>
-      <div className="glow-orb glow-orb-1"></div>
-      <div className="glow-orb glow-orb-2"></div>
-      <div className="glow-orb glow-orb-3"></div>
-
-      {/* Floating Elements */}
-      <div className="floating-elements">
-        <div className="floating-element"></div>
-        <div className="floating-element"></div>
-        <div className="floating-element"></div>
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50"></div>
 
       {/* Main Content */}
       <div className="relative z-10 py-20 px-4">
@@ -230,8 +220,8 @@ const RepairBooking = () => {
             <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-reveal">
               Book <span className="bg-gradient-to-r from-pink-400 to-purple-600 bg-clip-text text-transparent">Repair Service</span>
             </h1>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto text-reveal-delay-1">
-              Get your mobile device repaired by certified technicians with genuine parts and warranty
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto text-reveal-delay-1">
+              Get your mobile device repaired by certified technicians with genuine parts
             </p>
           </div>
 
@@ -239,7 +229,7 @@ const RepairBooking = () => {
           <div className="mb-8">
             <button
               onClick={() => navigate(-1)}
-              className="inline-flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300"
+              className="inline-flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors duration-300"
             >
               <FiArrowLeft className="w-4 h-4" />
               <span>Back</span>
@@ -248,13 +238,13 @@ const RepairBooking = () => {
 
           {/* Optional Sign In Banner */}
           {!isAuthenticated && (
-            <div className="mb-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30 rounded-xl p-6">
+            <div className="mb-8 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-6">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="text-2xl">💡</div>
                   <div>
-                    <h3 className="text-white font-semibold">Want to track your booking?</h3>
-                    <p className="text-gray-300 text-sm">Create an account to get real-time updates and track your repair status</p>
+                    <h3 className="text-gray-900 font-semibold">Want to track your booking?</h3>
+                    <p className="text-gray-600 text-sm">Create an account to get real-time updates and track your repair status</p>
                   </div>
                 </div>
                 <div className="flex space-x-3">
@@ -268,7 +258,7 @@ const RepairBooking = () => {
                         } 
                       });
                     }}
-                    className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-gray-900 font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
                   >
                     Sign In
                   </button>
@@ -282,7 +272,7 @@ const RepairBooking = () => {
                         } 
                       });
                     }}
-                    className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-gray-900 font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
                   >
                     Sign Up
                   </button>
@@ -293,31 +283,31 @@ const RepairBooking = () => {
 
           {/* Signed In Status */}
           {isAuthenticated && (
-            <div className="mb-8 bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-xl p-4">
+            <div className="mb-8 bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-4">
               <div className="flex items-center space-x-3">
                 <div className="text-2xl">✅</div>
                 <div>
-                  <h3 className="text-white font-semibold">Signed In</h3>
-                  <p className="text-gray-300 text-sm">You can track your booking in the dashboard</p>
+                  <h3 className="text-gray-900 font-semibold">Signed In</h3>
+                  <p className="text-gray-600 text-sm">You can track your booking in the dashboard</p>
                 </div>
               </div>
             </div>
           )}
 
           {/* Booking Form */}
-          <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-lg rounded-2xl p-8 border border-gray-700/50 shadow-xl glow-on-hover">
+          <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-xl">
             <form onSubmit={handleSubmit} className="space-y-8">
               
               {/* Personal Information */}
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-white flex items-center mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 flex items-center mb-6">
                   <FiUser className="w-6 h-6 mr-3 text-pink-500" />
                   Personal Information
                 </h2>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-white font-medium mb-3">
+                    <label className="block text-gray-900 font-medium mb-3">
                       <FiUser className="w-4 h-4 inline mr-2" />
                       Full Name *
                     </label>
@@ -325,14 +315,14 @@ const RepairBooking = () => {
                       type="text"
                       value={formData.name}
                       onChange={(e) => handleInputChange('name', e.target.value)}
-                      className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                       placeholder="Enter your full name"
                       required
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-white font-medium mb-3">
+                    <label className="block text-gray-900 font-medium mb-3">
                       <FiMail className="w-4 h-4 inline mr-2" />
                       Email Address (Optional)
                     </label>
@@ -340,7 +330,7 @@ const RepairBooking = () => {
                       type="email"
                       value={formData.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
-                      className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                       placeholder="Enter your email address"
                     />
                   </div>
@@ -348,7 +338,7 @@ const RepairBooking = () => {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-white font-medium mb-3">
+                    <label className="block text-gray-900 font-medium mb-3">
                       <FiPhone className="w-4 h-4 inline mr-2" />
                       Phone Number *
                     </label>
@@ -356,7 +346,7 @@ const RepairBooking = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => handleInputChange('phone', e.target.value)}
-                      className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                       placeholder="Enter 10-digit phone number"
                       maxLength="10"
                       required
@@ -364,14 +354,14 @@ const RepairBooking = () => {
                   </div>
 
                   <div>
-                    <label className="block text-white font-medium mb-3">
+                    <label className="block text-gray-900 font-medium mb-3">
                       Address (Optional)
                     </label>
                     <input
                       type="text"
                       value={formData.address}
                       onChange={(e) => handleInputChange('address', e.target.value)}
-                      className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                       placeholder="Enter your address"
                     />
                   </div>
@@ -380,25 +370,25 @@ const RepairBooking = () => {
 
               {/* Device Information */}
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-white flex items-center mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 flex items-center mb-6">
                   <FiSmartphone className="w-6 h-6 mr-3 text-blue-500" />
                   Device Information
                 </h2>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-white font-medium mb-3">
+                    <label className="block text-gray-900 font-medium mb-3">
                       Mobile Brand *
                     </label>
                     <select
                       value={formData.deviceBrand}
                       onChange={(e) => handleInputChange('deviceBrand', e.target.value)}
-                      className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                      className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                       required
                     >
                       <option value="">Select Mobile Brand</option>
                       {mobileBrands.map(brand => (
-                        <option key={brand} value={brand} className="bg-gray-800">
+                        <option key={brand} value={brand} className="bg-white">
                           {brand}
                         </option>
                       ))}
@@ -406,32 +396,32 @@ const RepairBooking = () => {
                   </div>
 
                   <div>
-                    <label className="block text-white font-medium mb-3">
+                    <label className="block text-gray-900 font-medium mb-3">
                       Device Model (Optional)
                     </label>
                     <input
                       type="text"
                       value={formData.deviceModel}
                       onChange={(e) => handleInputChange('deviceModel', e.target.value)}
-                      className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                       placeholder="e.g., iPhone 15 Pro, Galaxy S24"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-white font-medium mb-3">
+                  <label className="block text-gray-900 font-medium mb-3">
                     Select Mobile Issue *
                   </label>
                   <select
                     value={formData.issueType}
                     onChange={(e) => handleInputChange('issueType', e.target.value)}
-                    className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                    className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                     required
                   >
                     <option value="">Select Issue Type</option>
                     {issueTypes.map(issue => (
-                      <option key={issue} value={issue} className="bg-gray-800">
+                      <option key={issue} value={issue} className="bg-white">
                         {issue}
                       </option>
                     ))}
@@ -441,19 +431,19 @@ const RepairBooking = () => {
 
               {/* Issue Description */}
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-white flex items-center mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 flex items-center mb-6">
                   <FiMessageSquare className="w-6 h-6 mr-3 text-green-500" />
                   Describe Your Issue
                 </h2>
                 
                 <div>
-                  <label className="block text-white font-medium mb-3">
+                  <label className="block text-gray-900 font-medium mb-3">
                     Issue Description *
                   </label>
                   <textarea
                     value={formData.issueDescription}
                     onChange={(e) => handleInputChange('issueDescription', e.target.value)}
-                    className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300 resize-none"
+                    className="w-full px-4 py-4 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 resize-none"
                     rows="4"
                     placeholder="Please describe the issue in detail. For example: Screen is cracked, phone not charging, battery drains quickly, etc."
                     required
@@ -463,14 +453,14 @@ const RepairBooking = () => {
 
               {/* Preferred Schedule */}
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-white flex items-center mb-6">
+                <h2 className="text-2xl font-bold text-gray-900 flex items-center mb-6">
                   <FiCheck className="w-6 h-6 mr-3 text-purple-500" />
                   Preferred Schedule (Optional)
                 </h2>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-white font-medium mb-3">
+                    <label className="block text-gray-900 font-medium mb-3">
                       Preferred Date
                     </label>
                     <input
@@ -478,22 +468,22 @@ const RepairBooking = () => {
                       value={formData.preferredDate}
                       onChange={(e) => handleInputChange('preferredDate', e.target.value)}
                       min={getTomorrowDate()}
-                      className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                      className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-white font-medium mb-3">
+                    <label className="block text-gray-900 font-medium mb-3">
                       Preferred Time
                     </label>
                     <select
                       value={formData.preferredTime}
                       onChange={(e) => handleInputChange('preferredTime', e.target.value)}
-                      className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 transition-all duration-300"
+                      className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                     >
                       <option value="">Select Time Slot</option>
                       {timeSlots.map(slot => (
-                        <option key={slot} value={slot} className="bg-gray-800">
+                        <option key={slot} value={slot} className="bg-white">
                           {slot}
                         </option>
                       ))}
@@ -503,11 +493,11 @@ const RepairBooking = () => {
               </div>
 
               {/* Submit Button */}
-              <div className="pt-6 border-t border-gray-600/50">
+              <div className="pt-6 border-t border-gray-200">
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-3"
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-3"
                 >
                   {loading ? (
                     <>
@@ -525,8 +515,8 @@ const RepairBooking = () => {
                 <p className="text-gray-400 text-sm text-center mt-4">
                   📞 We will contact you within 2 hours to confirm your booking
                 </p>
-                <p className="text-yellow-400 text-xs text-center mt-2 font-medium">
-                  📱 Display replacement comes with 7 days replacement warranty - Terms and conditions apply
+                <p className="text-gray-400 text-xs text-center">
+                  📱 Professional display replacement service
                 </p>
               </div>
             </form>
@@ -540,16 +530,10 @@ const RepairBooking = () => {
               <p className="text-gray-400 text-sm">Certified professionals with years of experience</p>
             </div>
             
-            <div className="bg-gradient-to-br from-green-500/10 to-green-600/10 border border-green-500/20 rounded-xl p-6 text-center">
-              <div className="text-4xl mb-4">🛡️</div>
-              <h3 className="text-white font-semibold mb-2">Warranty Included</h3>
-              <p className="text-gray-400 text-sm">All repairs come with warranty coverage</p>
-            </div>
-            
             <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 border border-purple-500/20 rounded-xl p-6 text-center">
-              <div className="text-4xl mb-4">🚚</div>
-              <h3 className="text-white font-semibold mb-2">Doorstep Service</h3>
-              <p className="text-gray-400 text-sm">Free pickup and delivery at your location</p>
+              <div className="text-4xl mb-4">�</div>
+              <h3 className="text-gray-900 font-semibold mb-2">Doorstep Service</h3>
+              <p className="text-gray-600 text-sm">Coming Soon - Free pickup and delivery</p>
             </div>
           </div>
         </div>

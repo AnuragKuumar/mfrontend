@@ -40,9 +40,9 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden bg-black">
+    <div className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden bg-white">
       {/* Animated Background */}
-      <div className="gradient-mesh"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50"></div>
       <div className="glow-orb glow-orb-1"></div>
       <div className="glow-orb glow-orb-2"></div>
       <div className="glow-orb glow-orb-3"></div>
@@ -75,13 +75,13 @@ const Login = () => {
           <div className="flex items-center justify-center space-x-3 mb-4">
             <img 
               src="/images/mkitone-logo.svg" 
-              alt="Mobi repair Logo" 
+              alt="Mobile repair Logo" 
               className="w-10 h-10"
             />
-            <span className="text-2xl font-bold text-white">Mobi repair</span>
+            <span className="text-2xl font-bold text-gray-900">Mobile repair</span>
           </div>
-          <h1 className="text-2xl font-bold text-white mb-2 text-reveal-delay-1">Welcome Back</h1>
-          <p className="text-dark-300 text-reveal-delay-2">Sign in to your account to continue</p>
+          <h1 className="text-2xl font-bold text-gray-900 mb-2 text-reveal-delay-1">Welcome Back</h1>
+          <p className="text-gray-600 text-reveal-delay-2">Sign in to your account to continue</p>
         </div>
 
         {/* Login Form */}
@@ -89,11 +89,11 @@ const Login = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Email Field */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
                 Email Address
               </label>
               <div className="relative">
-                <FiMail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-dark-400 w-5 h-5" />
+                <FiMail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
                 <input
                   type="email"
                   id="email"
@@ -109,11 +109,11 @@ const Login = () => {
 
             {/* Password Field */}
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-white mb-2">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-900 mb-2">
                 Password
               </label>
               <div className="relative">
-                <FiLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-dark-400 w-5 h-5" />
+                <FiLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
                 <input
                   type={showPassword ? 'text' : 'password'}
                   id="password"
@@ -127,7 +127,7 @@ const Login = () => {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-dark-400 hover:text-white transition-colors"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-900 transition-colors"
                 >
                   {showPassword ? <FiEyeOff className="w-5 h-5" /> : <FiEye className="w-5 h-5" />}
                 </button>
@@ -160,14 +160,14 @@ const Login = () => {
 
           {/* Divider */}
           <div className="my-6 flex items-center">
-            <div className="flex-1 border-t border-dark-600"></div>
-            <span className="px-4 text-dark-400 text-sm">or</span>
-            <div className="flex-1 border-t border-dark-600"></div>
+            <div className="flex-1 border-t border-gray-300"></div>
+            <span className="px-4 text-gray-500 text-sm">or</span>
+            <div className="flex-1 border-t border-gray-300"></div>
           </div>
 
           {/* Sign Up Link */}
           <div className="text-center">
-            <p className="text-dark-300">
+            <p className="text-gray-600">
               Don't have an account?{' '}
               <Link
                 to="/register"

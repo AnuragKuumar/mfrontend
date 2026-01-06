@@ -89,9 +89,9 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden bg-black">
+    <div className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden bg-white">
       {/* Animated Background */}
-      <div className="gradient-mesh"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50"></div>
       <div className="glow-orb glow-orb-1"></div>
       <div className="glow-orb glow-orb-2"></div>
       <div className="glow-orb glow-orb-3"></div>
@@ -124,13 +124,13 @@ const Register = () => {
           <div className="flex items-center justify-center mb-4">
             <img 
               src="/images/mkitone-logo.svg" 
-              alt="Mobi repair Logo" 
+              alt="Mobile repair Logo" 
               className="w-10 h-10"
             />
-            <span className="text-2xl font-bold text-white ml-3">Mobi repair</span>
+            <span className="text-2xl font-bold text-gray-900 ml-3">Mobile repair</span>
           </div>
-          <h1 className="text-2xl font-bold text-white mb-2 text-reveal-delay-1">Create Account</h1>
-          <p className="text-dark-300 text-reveal-delay-2">Join Mobi repair for professional mobile repair services</p>
+          <h1 className="text-2xl font-bold text-gray-900 mb-2 text-reveal-delay-1">Create Account</h1>
+          <p className="text-gray-600 text-reveal-delay-2">Join Mobile repair for professional mobile repair services</p>
         </div>
 
         {/* Register Form */}
@@ -138,11 +138,11 @@ const Register = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name Field */}
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
+              <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
                 Full Name
               </label>
               <div className="relative">
-                <FiUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-dark-400 w-5 h-5" />
+                <FiUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
                 <input
                   type="text"
                   id="name"
@@ -159,11 +159,11 @@ const Register = () => {
 
             {/* Email Field */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
                 Email Address
               </label>
               <div className="relative">
-                <FiMail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-dark-400 w-5 h-5" />
+                <FiMail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
                 <input
                   type="email"
                   id="email"
@@ -180,11 +180,11 @@ const Register = () => {
 
             {/* Phone Field */}
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">
                 Phone Number
               </label>
               <div className="relative">
-                <FiPhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-dark-400 w-5 h-5" />
+                <FiPhone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
                 <input
                   type="tel"
                   id="phone"
@@ -201,11 +201,11 @@ const Register = () => {
 
             {/* Password Field */}
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-white mb-2">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-900 mb-2">
                 Password
               </label>
               <div className="relative">
-                <FiLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-dark-400 w-5 h-5" />
+                <FiLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
                 <input
                   type={showPassword ? 'text' : 'password'}
                   id="password"
@@ -219,7 +219,7 @@ const Register = () => {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-dark-400 hover:text-white transition-colors"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-900 transition-colors"
                 >
                   {showPassword ? <FiEyeOff className="w-5 h-5" /> : <FiEye className="w-5 h-5" />}
                 </button>
@@ -229,11 +229,11 @@ const Register = () => {
 
             {/* Confirm Password Field */}
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-white mb-2">
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-900 mb-2">
                 Confirm Password
               </label>
               <div className="relative">
-                <FiLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-dark-400 w-5 h-5" />
+                <FiLock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
                 <input
                   type={showConfirmPassword ? 'text' : 'password'}
                   id="confirmPassword"
@@ -247,7 +247,7 @@ const Register = () => {
                 <button
                   type="button"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-dark-400 hover:text-white transition-colors"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-900 transition-colors"
                 >
                   {showConfirmPassword ? <FiEyeOff className="w-5 h-5" /> : <FiEye className="w-5 h-5" />}
                 </button>
@@ -260,10 +260,10 @@ const Register = () => {
               <input
                 type="checkbox"
                 id="terms"
-                className="mt-1 w-4 h-4 text-primary-500 bg-dark-700 border-dark-600 rounded focus:ring-primary-500"
+                className="mt-1 w-4 h-4 text-primary-500 bg-white border-gray-300 rounded focus:ring-primary-500"
                 required
               />
-              <label htmlFor="terms" className="text-sm text-dark-300">
+              <label htmlFor="terms" className="text-sm text-gray-600">
                 I agree to the{' '}
                 <Link to="/terms" className="text-primary-400 hover:text-primary-300">
                   Terms & Conditions
@@ -291,14 +291,14 @@ const Register = () => {
 
           {/* Divider */}
           <div className="my-6 flex items-center">
-            <div className="flex-1 border-t border-dark-600"></div>
-            <span className="px-4 text-dark-400 text-sm">or</span>
-            <div className="flex-1 border-t border-dark-600"></div>
+            <div className="flex-1 border-t border-gray-300"></div>
+            <span className="px-4 text-gray-500 text-sm">or</span>
+            <div className="flex-1 border-t border-gray-300"></div>
           </div>
 
           {/* Sign In Link */}
           <div className="text-center">
-            <p className="text-dark-300">
+            <p className="text-gray-600">
               Already have an account?{' '}
               <Link
                 to="/login"
