@@ -383,12 +383,12 @@ const RepairBooking = () => {
                     <select
                       value={formData.deviceBrand}
                       onChange={(e) => handleInputChange('deviceBrand', e.target.value)}
-                      className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 rounded-xl text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                       required
                     >
                       <option value="">Select Mobile Brand</option>
                       {mobileBrands.map(brand => (
-                        <option key={brand} value={brand} className="bg-white">
+                        <option key={brand} value={brand} className="bg-white text-gray-900">
                           {brand}
                         </option>
                       ))}
@@ -416,12 +416,12 @@ const RepairBooking = () => {
                   <select
                     value={formData.issueType}
                     onChange={(e) => handleInputChange('issueType', e.target.value)}
-                    className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
+                    className="w-full px-4 py-4 bg-white border border-gray-300 rounded-xl text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                     required
                   >
                     <option value="">Select Issue Type</option>
                     {issueTypes.map(issue => (
-                      <option key={issue} value={issue} className="bg-white">
+                      <option key={issue} value={issue} className="bg-white text-gray-900">
                         {issue}
                       </option>
                     ))}
@@ -468,7 +468,7 @@ const RepairBooking = () => {
                       value={formData.preferredDate}
                       onChange={(e) => handleInputChange('preferredDate', e.target.value)}
                       min={getTomorrowDate()}
-                      className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 rounded-xl text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                     />
                   </div>
 
@@ -479,11 +479,11 @@ const RepairBooking = () => {
                     <select
                       value={formData.preferredTime}
                       onChange={(e) => handleInputChange('preferredTime', e.target.value)}
-                      className="w-full px-4 py-4 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-xl text-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
+                      className="w-full px-4 py-4 bg-white border border-gray-300 rounded-xl text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                     >
                       <option value="">Select Time Slot</option>
                       {timeSlots.map(slot => (
-                        <option key={slot} value={slot} className="bg-white">
+                        <option key={slot} value={slot} className="bg-white text-gray-900">
                           {slot}
                         </option>
                       ))}
