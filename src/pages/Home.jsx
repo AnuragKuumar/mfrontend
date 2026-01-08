@@ -10,6 +10,12 @@ import {
   MdHomeRepairService
 } from 'react-icons/md';
 
+
+
+
+
+
+
 const Home = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const navigate = useNavigate();
@@ -32,7 +38,7 @@ const Home = () => {
             {/* Left Side - Your SVG File */}
             <div className="relative overflow-hidden rounded-lg bg-gray-100 min-h-[300px] lg:min-h-[400px] flex items-center justify-center shadow-md order-2 lg:order-1">
               <img 
-                src="/images/mobile-repair-workspace.jpg" 
+                src="./img2.jpeg" 
                 alt="Professional Mobile Repair Service" 
                 className="w-full h-full object-cover rounded-lg"
                 style={{ minHeight: '300px' }}

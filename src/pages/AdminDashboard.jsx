@@ -11,7 +11,8 @@ import {
   FiEye,
   FiX,
   FiLogOut,
-  FiMessageSquare
+  FiMessageSquare,
+  FiTrash2
 } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import toast from 'react-hot-toast';
@@ -164,6 +165,41 @@ const AdminDashboard = () => {
       } catch (error) {
         console.error('Error sending SMS:', error);
         toast.error('Failed to send SMS');
+      }
+    }
+  };
+
+  const handleDeleteBooking = async (bookingId, customerName, status) => {
+    const confirmDelete = window.confirm(
+      `Are you sure you want to delete the booking for ${customerName}?\n\nStatus: ${status}\n\nThis action cannot be undone.`
+    );
+
+    if (!confirmDelete) return;
+
+    try {
+      const token = localStorage.getItem('adminToken');
+      const config = {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      };
+
+      const response = await axios.delete(
+        `${API_BASE_URL}/admin/bookings/${bookingId}`,
+        config
+      );
+
+      if (response.data.success) {
+        toast.success('🗑️ Booking deleted successfully');
+        fetchDashboardData(); // Refresh data
+        setShowModal(false); // Close modal if open
+      }
+    } catch (error) {
+      console.error('Error deleting booking:', error);
+      if (error.response?.status === 400) {
+        toast.error(error.response.data.message || 'Cannot delete this booking');
+      } else {
+        toast.error('Failed to delete booking');
       }
     }
   };
@@ -385,6 +421,17 @@ const AdminDashboard = () => {
                         >
                           <FiEye className="w-4 h-4" />
                         </button>
+                        <button
+                          onClick={() => handleDeleteBooking(
+                            booking.id, 
+                            booking.customerName || booking.customerDetails?.name,
+                            booking.status
+                          )}
+                          className="text-red-600 hover:text-red-900 p-1 rounded"
+                          title="Delete Booking"
+                        >
+                          <FiTrash2 className="w-4 h-4" />
+                        </button>
                       </div>
                     </td>
                   </tr>
@@ -454,6 +501,17 @@ const AdminDashboard = () => {
                         title="Send SMS"
                       >
                         <FiMessageSquare className="w-4 h-4" />
+                      </button>
+                      <button
+                        onClick={() => handleDeleteBooking(
+                          booking.id, 
+                          booking.customerName || booking.customerDetails?.name,
+                          booking.status
+                        )}
+                        className="flex items-center justify-center w-8 h-8 text-red-600 hover:text-red-900 hover:bg-red-50 rounded-full transition-colors"
+                        title="Delete Booking"
+                      >
+                        <FiTrash2 className="w-4 h-4" />
                       </button>
                     </div>
                     <button
@@ -539,6 +597,24 @@ const AdminDashboard = () => {
                   >
                     Complete
                   </button>
+                </div>
+                
+                {/* Delete Button - Admin can delete any booking */}
+                <div className="mt-4">
+                  <button
+                    onClick={() => handleDeleteBooking(
+                      selectedBooking.id, 
+                      selectedBooking.customerName || selectedBooking.customerDetails?.name,
+                      selectedBooking.status
+                    )}
+                    className="w-full px-4 py-3 bg-red-600 text-white text-sm font-medium rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center space-x-2"
+                  >
+                    <FiTrash2 className="w-4 h-4" />
+                    <span>Delete Booking</span>
+                  </button>
+                  <p className="text-xs text-gray-500 text-center mt-2">
+                    ⚠️ This action cannot be undone
+                  </p>
                 </div>
               </div>
 
